@@ -1,0 +1,27 @@
+.mobile-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4a5b6b;
+    height: 60px;
+    z-index: 1000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(#000000, .4);
+    &__logo.logo {
+        font-size: 16px;
+    }
+    .sidebar_button {
+        margin-bottom: 0;
+    }
+    &__button--lk {
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}

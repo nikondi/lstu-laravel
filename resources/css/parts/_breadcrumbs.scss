@@ -1,0 +1,37 @@
+.breadcrumbs {
+    display: flex;
+    list-style: none;
+    li {
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+            margin-right: 8px;
+            position: relative;
+        }
+        &:first-child a {
+            display: flex;
+            align-items: center;
+            svg {
+                margin-right: 8px;
+            }
+        }
+        span,
+        a {
+            display: block;
+            margin-right: 8px;
+            text-decoration: none;
+            padding: 3px;
+            color: #777777;
+        }
+        a {
+            transition: .3s color;
+            &:hover {
+                color: #444444;
+            }
+        }
+        svg {
+            position: relative;
+            top: -1px;
+        }
+    }
+}

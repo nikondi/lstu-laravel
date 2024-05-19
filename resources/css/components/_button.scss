@@ -1,0 +1,34 @@
+.btn {
+    display: inline-flex;
+    min-height: 56px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #FF8300;
+    background: #FF8300;
+    border-radius: 2px;
+    padding: 5px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition-property: background, border-color, color;
+    transition-duration: .3s;
+    &:hover {
+        background: #e57500;
+        border-color: #e57500;
+    }
+
+    &--outlined {
+        background: transparent;
+        color: #333333;
+        &:hover {
+            background: #FF8300;
+            border-color: #FF8300;
+            color: #ffffff;
+        }
+    }
+    @media (max-width: 767px) {
+        min-height: 42px;
+    }
+    @media (max-width: 575px) {
+        font-size: 14px;
+    }
+}

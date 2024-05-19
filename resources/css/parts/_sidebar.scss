@@ -1,0 +1,78 @@
+.sidebar {
+    width: 70px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #4A5B6B;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+
+    &_part {
+        &--middle {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &_button {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        text-decoration: none;
+        background: transparent;
+        width: 50px;
+        height: 50px;
+        color: #bdbdbd;
+        transition: .3s color;
+        font-size: 16px;
+
+        &:hover {
+            color: #ffffff;
+        }
+        &--language {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        &:hover + .sidebar_tooltip {
+            visibility: visible;
+            opacity: 1;
+            bottom: 100%;
+        }
+    }
+    &_tooltip {
+        position: absolute;
+        left: 0;
+        color: #FFFFFF;
+        width: 150px;
+        padding: 6px 11px;
+        background-color: #6789a2;
+        border-radius: 3px;
+        text-align: left;
+        font-size: 14px;
+        box-shadow: 0 2px 4px 0 rgba(#000000, .4);
+        transition-duration: .2s;
+        transition-property: bottom, opacity, visibility;
+
+        visibility: hidden;
+        opacity: 0;
+        bottom: 85%;
+
+        &__wrapper {
+            position: relative;
+        }
+    }
+}

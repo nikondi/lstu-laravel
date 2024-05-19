@@ -1,0 +1,36 @@
+.file-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+}
+.file {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50px;
+    padding-left: 50px;
+    max-width: 400px;
+    background-position: top left;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    &__title {
+        color: #444444;
+        font-size: 15px;
+        transition: .2s color;
+    }
+    &__description {
+        margin-top: 4px;
+        color: #777777;
+        font-size: 12px;
+        transition: .2s color;
+    }
+    &:hover &__title {
+        color: #000000;
+    }
+    &:hover &__description {
+        color: #444444;
+    }
+    &--pdf {
+        background-image: url("/img/icons/file/pdf.svg");
+    }
+}

@@ -1,0 +1,10 @@
+@import "../variables";
+
+.page-title {
+    padding: 10px $container-padding 50px;
+    h1 {
+        font-weight: 400;
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+}

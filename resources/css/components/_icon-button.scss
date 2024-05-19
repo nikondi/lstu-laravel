@@ -1,0 +1,24 @@
+.icon-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    .icon-button:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 8px;
+    border: 1px solid #FF8300;
+    border-radius: 2px;
+    text-decoration: none;
+    color: #444444;
+    transition: .2s background-color;
+    &:hover {
+        background-color: rgba(#FF8300, .05);
+    }
+    svg {
+        margin-right: 5px;
+    }
+}

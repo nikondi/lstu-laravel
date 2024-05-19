@@ -1,0 +1,190 @@
+.abit-programs {
+    display: flex;
+    flex-wrap: wrap;
+}
+.abit-program {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: .2s background-color;
+    &--spo {
+        background-color: #00AC6A;
+        &:hover {
+            background-color: #00915a;
+        }
+    }
+    &--bak {
+        background-color: #4A5B6B;
+        &:hover {
+            background-color: #3e4b59;
+        }
+    }
+    &--mag {
+        background-color: #E43D30;
+        &:hover {
+            background-color: #c93227;
+        }
+    }
+    &__icon {
+        margin-right: 20px;
+        img {
+            width: 60px;
+            min-width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+    }
+    @media (max-width: 767px) {
+        font-size: 14px;
+        &__icon img {
+            min-width: 30px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.abit__icon-buttons {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.abit-contacts-faks {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    flex: 1;
+    padding-right: 10px;
+    .abit-contacts-fak {
+        width: 50%;
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+    }
+}
+.abit-contacts-fak {
+    padding: 5px 10px;
+    &__title {
+        font-size: 18px;
+        margin-bottom: 8px;
+        color: #000000;
+    }
+    &__contact {
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+        a {
+            display: inline-flex;
+            text-decoration: none;
+            color: inherit;
+            align-items: center;
+            font-size: 14px;
+            svg {
+                width: 14px;
+                height: 14px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.abit-contacts {
+    display: flex;
+    margin-bottom: 40px;
+    @media (max-width: 1199px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.abit-contacts-location {
+    background-color: #ffffff;
+    width: 50%;
+    max-width: 880px;
+    padding: 30px 200px 30px 30px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/img/abit/location.svg");
+    background-position: bottom -18px right -70px;
+    background-repeat: no-repeat;
+    &__text {
+        max-width: 600px;
+        flex: 1;
+        color: #000000;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 60px;
+        p {
+            min-height: 1px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+        strong {
+            font-weight: 500;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: .2s color;
+            &:hover {
+                color: #333333;
+            }
+        }
+    }
+    &__footer {
+        max-width: 640px;
+        color: #979797;
+        font-size: 12px;
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: .2s color;
+            &:hover {
+                color: #444444;
+            }
+        }
+    }
+    @media (max-width: 1199px) {
+        max-width: unset;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    @media (max-width: 767px) {
+        background-size: 150px;
+        background-position: bottom -9px right -35px;
+        padding: 15px 100px 15px 15px;
+        &__text {
+            font-size: 14px;
+        }
+        &__footer {
+            font-size: 11px;
+        }
+    }
+}
+
+.abit-files {
+    .file-list {
+        margin-top: 30px;
+    }
+}
+
+.abit-bottom-links {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 15px;
+    a {
+        color: #333333;
+        text-decoration: none;
+        transition: .2s color;
+        &:hover {
+            color: #000000;
+        }
+    }
+}
