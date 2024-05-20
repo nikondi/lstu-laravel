@@ -1,3 +1,4 @@
+<div class="header-placeholder"></div>
 <header class="header container">
     <a href="/" class="logo header__logo">
         ЛИПЕЦКИЙ ГОСУДАРСТВЕННЫЙ<br /> ТЕХНИЧЕСКИЙ УНИВЕРСТИТЕТ

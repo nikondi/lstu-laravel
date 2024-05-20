@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/abit', function () {
     return view('abit');
 })->name('abit');
+
+Route::get('/fak', function () {
+    return view('fak');
+})->name('fak');

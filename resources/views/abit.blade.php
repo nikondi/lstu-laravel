@@ -262,7 +262,7 @@
         </div>
     </div>
     <div class="abit-files container">
-        <h2>Оплата обучения</h2>
+        <h2 class="heading-2">Оплата обучения</h2>
         <div class="file-list">
             <a href="#" class="file file--pdf">
                 <div class="file__title">Единый договор об образовании</div>

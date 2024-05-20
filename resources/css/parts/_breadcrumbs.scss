@@ -1,6 +1,7 @@
 .breadcrumbs {
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
     li {
         display: flex;
         align-items: center;

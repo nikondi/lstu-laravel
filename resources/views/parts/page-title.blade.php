@@ -15,7 +15,7 @@
         @foreach($breadcrumbs as $i => $breadcrumb)
             <li>
                 @if(is_array($breadcrumb) && isset($breadcrumb['link']))
-                    <a href="{{ $breadcrumbs['link'] }}">{{ $breadcrumb['title'] }}</a>
+                    <a href="{{ $breadcrumb['link'] }}">{{ $breadcrumb['title'] }}</a>
                 @else
                     <span>{{ $breadcrumb['title'] ?? $breadcrumb }}</span>
                 @endif
