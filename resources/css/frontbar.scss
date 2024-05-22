@@ -1,0 +1,112 @@
+.frontbar {
+    background-color: #222222;
+    color: #ffffff;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    &__inner {
+        display: flex;
+    }
+    &__header {
+        display: none;
+    }
+    @media (max-width: 575px) {
+        &__inner {
+            display: none;
+        }
+        &__header {
+            display: block;
+        }
+    }
+}
+.frontbar-menu {
+    display: flex;
+    list-style: none;
+    > li > a {
+        padding: 8px 10px;
+        display: inline-block;
+    }
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: .2s background-color;
+        &:hover {
+            background-color: #4f91ff;
+        }
+    }
+    &--left {
+        flex: 1;
+    }
+    &--right {
+        .frontbar-dropdown-list {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+.frontbar-dropdown {
+    position: relative;
+    > button {
+        font-family: inherit;
+        font-size: inherit;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        column-gap: 7px;
+        padding: 8px 10px;
+        background: none;
+        border: 0;
+        color: #ffffff;
+        transition: .2s background-color;
+        &:hover {
+            background-color: #4f91ff;
+        }
+    }
+    &.active {
+        > button {
+            background-color: #2b78ff;
+        }
+        .frontbar-dropdown-list {
+            padding-top: 0;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+.frontbar-dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 220px;
+    z-index: 3;
+    padding-top: 10px;
+    transition-property: padding-top, visibility, opacity;
+    transition-duration: .3s;
+    visibility: hidden;
+    opacity: 0;
+    ul {
+        list-style: none;
+        background-color: #333333;
+    }
+    li a {
+        display: block;
+        padding: 9px 10px;
+        font-size: 14px;
+        transition: .2s background-color;
+        &:hover {
+            background-color: #444444;
+        }
+    }
+}
+.frontbar-avatar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    img {
+        display: block;
+        object-fit: cover;
+        margin: 0 auto;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+}

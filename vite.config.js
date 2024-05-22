@@ -17,7 +17,9 @@ export default defineConfig({
             input: [
                 'resources/css/styles.scss',
                 'resources/js/js.js',
-                'resources/js/main.js'
+                'resources/js/main.js',
+                'resources/js/frontbar.js',
+                'resources/css/frontbar.scss'
             ],
             refresh: true,
         }),

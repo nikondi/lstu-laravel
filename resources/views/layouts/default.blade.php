@@ -14,6 +14,7 @@
 <div class="wrapper">
     @include('parts.sidebar')
     <main class="page-content">
+        @include('parts.frontbar')
         @yield('content')
     </main>
 </div>
