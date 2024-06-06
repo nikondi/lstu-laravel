@@ -294,7 +294,7 @@ img {
     font-size: 32px;
     width: 2.5625em;
     height: 2.96875em;
-    background: url("/img/faks/frame.svg") center center no-repeat;
+    background: url("/assets/img/faks/frame.svg") center center no-repeat;
     background-size: 100%;
     position: relative;
     &__logo {
@@ -682,6 +682,7 @@ img {
         text-align: center;
         display: flex;
         flex-direction: column;
+        min-width: 100px;
         &__date {
             padding: 10px;
             display: flex;

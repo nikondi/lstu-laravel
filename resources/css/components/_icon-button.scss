@@ -14,9 +14,11 @@
     border-radius: 2px;
     text-decoration: none;
     color: #444444;
-    transition: .2s background-color;
+    transition-property: background-color, color;
+    transition-duration: .2s;
     &:hover {
-        background-color: rgba(#FF8300, .05);
+        background-color: #FF8300;
+        color: #ffffff;
     }
     svg {
         margin-right: 5px;

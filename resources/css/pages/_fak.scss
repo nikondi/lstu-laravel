@@ -99,6 +99,23 @@
         p:not(:last-child) {
             margin-bottom: 1.1em;
         }
+        a {
+            text-decoration: none;
+            transition: .2s color;
+            color: #25539b;
+            &:hover {
+                color: #2e6fd2;
+            }
+        }
+        ul {
+            padding-left: 20px;
+            &:not(:last-child) {
+                margin-bottom: 1.1em;
+            }
+        }
+        h4 {
+            margin-bottom: 1.1em;
+        }
     }
     @media (max-width: 767px) {
         flex-direction: column;

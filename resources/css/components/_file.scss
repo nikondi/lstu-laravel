@@ -1,6 +1,7 @@
 .file-list {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     gap: 20px 30px;
 }
 .file {
@@ -30,7 +31,9 @@
     &:hover &__description {
         color: #444444;
     }
+    /* TODO: default file icon */
+    /* TODO: Кнопка цифровой подписи */
     &--pdf {
-        background-image: url("/img/icons/file/pdf.svg");
+        background-image: url("/assets/img/icons/file/pdf.svg");
     }
 }

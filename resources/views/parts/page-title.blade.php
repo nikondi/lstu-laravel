@@ -1,4 +1,4 @@
-<div class="page-title">
+<div class="page-title container">
     <h1>{{ $title ?? '' }}</h1>
     <ul class="breadcrumbs">
         <li>
@@ -9,7 +9,7 @@
                 ЛГТУ
             </a>
             <svg width="10" height="10">
-                <use xlink:href="{{ asset('/img/arrows.svg#right') }}"></use>
+                <use xlink:href="{{ asset('/assets/img/arrows.svg#right') }}"></use>
             </svg>
         </li>
         @foreach($breadcrumbs as $i => $breadcrumb)
@@ -21,7 +21,7 @@
                 @endif
                 @if($i < sizeof($breadcrumbs) - 1)
                     <svg width="10" height="10">
-                        <use xlink:href="{{ asset('/img/arrows.svg#right') }}"></use>
+                        <use xlink:href="{{ asset('/assets/img/arrows.svg#right') }}"></use>
                     </svg>
                 @endif
             </li>

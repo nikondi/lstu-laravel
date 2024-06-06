@@ -17,7 +17,7 @@
             left: 0;
             width: 21px;
             height: 21px;
-            background: url("/img/plus.svg") no-repeat center center;
+            background: url("/assets/img/plus.svg") no-repeat center center;
             transform-origin: 50% 50%;
             transition: .4s transform;
         }
@@ -31,6 +31,22 @@
         overflow: hidden;
         transition-property: border-top-width, visibility, max-height;
         transition-duration: .4s;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+            padding-top: 10px;
+            padding-left: 6px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333333;
+            transition: .2s color;
+            &:hover {
+                color: #777777;
+            }
+        }
 
         ul {
             padding-top: 12px;
@@ -53,14 +69,6 @@
                     height: 1px;
                     width: 15px;
                 }
-                a {
-                    text-decoration: none;
-                    color: #333333;
-                    transition: .2s color;
-                    &:hover {
-                        color: #777777;
-                    }
-                }
             }
         }
     }
@@ -78,6 +86,9 @@
             font-size: 15px;
         }
         &__content {
+            h3 {
+                font-size: 15px;
+            }
             ul li {
                 font-size: 13px;
                 padding-left: 30px;

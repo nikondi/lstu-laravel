@@ -78,6 +78,7 @@
             margin-bottom: 5px;
         }
         a {
+            /* TODO: Hover */
             display: inline-flex;
             text-decoration: none;
             color: inherit;
@@ -108,7 +109,7 @@
     border-radius: 3px;
     display: flex;
     flex-direction: column;
-    background-image: url("/img/abit/location.svg");
+    background-image: url("/assets/img/abit/location.svg");
     background-position: bottom -18px right -70px;
     background-repeat: no-repeat;
     &__text {
