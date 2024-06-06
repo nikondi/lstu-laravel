@@ -58,7 +58,7 @@ services:
         context: .
         dockerfile: ./docker/nodejs/Dockerfile
     tty: true
-    #restart: always
+    restart: unless-stopped
     ports:
         - "5173:5173"
     working_dir: /var/www
