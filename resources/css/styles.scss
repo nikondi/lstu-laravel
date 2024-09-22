@@ -76,6 +76,7 @@ img {
 @import "components/dean";
 @import "components/file";
 @import "components/directions";
+@import "components/useful-links";
 
 @import "pages/main";
 @import "pages/abit";
@@ -706,4 +707,17 @@ img {
     visibility: hidden;
     top: -1000px;
     left: -1000px;
+}
+
+
+#content {
+    line-height: 1.1;
+    strong {
+        font-weight: 600;
+    }
+    p {
+        &:not(:last-child) {
+            margin-bottom: 1.1em;
+        }
+    }
 }

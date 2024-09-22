@@ -13,3 +13,7 @@ Route::get('/abit', function () {
 Route::get('/fak', function () {
     return view('fak');
 })->name('fak');
+
+Route::get('/static', function () {
+    return view('static');
+})->name('static');

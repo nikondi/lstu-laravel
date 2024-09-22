@@ -1,0 +1,37 @@
+.useful-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+    > li {
+        flex: 1;
+        min-width: 320px;
+        max-width: 340px;
+    }
+}
+
+.useful-link {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    color: #333333;
+    text-decoration: none;
+    box-shadow: 0 0 15px 0 rgba(40, 40, 40, 0.1);
+    transition: .3s box-shadow;
+    &:hover {
+        box-shadow: 0 0 15px 0 rgba(40, 40, 40, 0.2);
+    }
+    &__image {
+        border-radius: 4px;
+        padding: 10px;
+        background-color: #EFEFEF;
+        margin-right: 15px;
+        svg {
+            width: 40px;
+            height: 40px;
+            color: #132D55;
+        }
+    }
+}
