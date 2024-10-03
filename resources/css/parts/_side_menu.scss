@@ -8,6 +8,9 @@
     visibility: hidden;
     --open-transition-duration: .7s;
     transition: var(--open-transition-duration, .7s) visibility;
+    &:not(.init) {
+        display: none;
+    }
     &.active {
         visibility: visible;
     }

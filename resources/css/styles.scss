@@ -77,10 +77,13 @@ img {
 @import "components/file";
 @import "components/directions";
 @import "components/useful-links";
+@import "components/pagination";
 
 @import "pages/main";
 @import "pages/abit";
 @import "pages/fak";
+@import "pages/news-single";
+@import "pages/news";
 
 .heading-2 {
     font-size: 24px;

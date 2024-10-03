@@ -1,5 +1,4 @@
 <div class="page-title container">
-    <h1>{{ $title ?? '' }}</h1>
     <ul class="breadcrumbs">
         <li>
             <a href="{{ route('welcome') }}">
@@ -28,4 +27,5 @@
 
         @endforeach
     </ul>
+    <h1>{{ $title ?? '' }}</h1>
 </div>

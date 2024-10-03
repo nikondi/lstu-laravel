@@ -17,3 +17,13 @@ Route::get('/fak', function () {
 Route::get('/static', function () {
     return view('static');
 })->name('static');
+
+Route::prefix('news')->name('news.')->group(function() {
+    Route::get('', function () {
+        return view('news.index');
+    })->name('index');
+
+    Route::get('single', function () {
+        return view('news.single');
+    })->name('single');
+});
