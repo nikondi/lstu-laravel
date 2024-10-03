@@ -5,7 +5,7 @@
             <input type="text" name="search" placeholder="Поиск..." />
         </label>
         <button type="submit">
-            <svg width="1em" height="1em"><use xlink:href="img/icons.svg#search" /></svg>
+            <svg width="1em" height="1em"><use xlink:href="/assets/img/icons.svg#search" /></svg>
         </button>
     </form>
 </div>

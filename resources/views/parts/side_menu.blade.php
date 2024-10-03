@@ -6,9 +6,9 @@
                 <li><a href="#">Поступающим</a></li>
                 <li class="has-submenu">
                     <a href="#">Сведения об образовательной организации</a>
-                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#right"/></svg></div>
+                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#right"/></svg></div>
                     <div class="side_menu__submenu">
-                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#left"/></svg></div>
+                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#left"/></svg></div>
                         <ul>
                             <li><a href="#">Основные сведения</a></li>
                             <li><a href="#">Структура и органы управления образовательной организацией</a></li>
@@ -28,9 +28,9 @@
                 </li>
                 <li class="has-submenu">
                     <a href="#">Общая информация</a>
-                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#right"/></svg></div>
+                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#right"/></svg></div>
                     <div class="side_menu__submenu">
-                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#left"/></svg></div>
+                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#left"/></svg></div>
                         <ul>
                             <li><a href="#">Об университете</a></li>
                             <li><a href="#">Символика</a></li>
@@ -45,9 +45,9 @@
                 </li>
                 <li class="has-submenu">
                     <a href="#">Структура и органы управления</a>
-                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#right"/></svg></div>
+                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#right"/></svg></div>
                     <div class="side_menu__submenu">
-                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#left"/></svg></div>
+                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#left"/></svg></div>
                         <ul>
                             <li><a href="#">Ученый совет</a></li>
                             <li><a href="#">Управление университетом</a></li>
@@ -59,9 +59,9 @@
                 </li>
                 <li class="has-submenu">
                     <a href="#">Факультеты, институты</a>
-                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#right"/></svg></div>
+                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#right"/></svg></div>
                     <div class="side_menu__submenu">
-                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#left"/></svg></div>
+                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#left"/></svg></div>
                         <ul>
                             <li><a href="#">Институт машиностроения и транспорта</a></li>
                             <li><a href="#">Металлургический институт</a></li>
@@ -78,9 +78,9 @@
                 </li>
                 <li class="has-submenu">
                     <a href="#">Кафедры</a>
-                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#right"/></svg></div>
+                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#right"/></svg></div>
                     <div class="side_menu__submenu">
-                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#left"/></svg></div>
+                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#left"/></svg></div>
                         <ul>
                             <li><a href="#">Автоматизированные системы управления</a></li>
                             <li><a href="#">Автоматизированный электропривод и робототехника</a></li>
@@ -122,9 +122,9 @@
                 </li>
                 <li class="has-submenu">
                     <a href="#">Военный учебный центр</a>
-                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#right"/> </svg></div>
+                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#right"/> </svg></div>
                     <div class="side_menu__submenu">
-                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#left"/></svg></div>
+                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#left"/></svg></div>
                         <ul>
                             <li><a href="#">Институт машиностроения и транспорта</a></li>
                             <li><a href="#">Металлургический институт</a></li>
@@ -135,9 +135,9 @@
                 </li>
                 <li class="has-submenu">
                     <a href="#">Виды деятельности</a>
-                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#right"/> </svg></div>
+                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#right"/> </svg></div>
                     <div class="side_menu__submenu">
-                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#left"/></svg></div>
+                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#left"/></svg></div>
                         <ul>
                             <li><a href="#">Образовательная</a></li>
                             <li><a href="#">Научная</a></li>
@@ -154,9 +154,9 @@
                 <li><a href="#">Национальный проект «Наука и университеты»</a></li>
                 <li class="has-submenu">
                     <a href="#">Общественная жизнь</a>
-                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#right"/> </svg></div>
+                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#right"/> </svg></div>
                     <div class="side_menu__submenu">
-                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#left"/></svg></div>
+                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#left"/></svg></div>
                         <ul>
                             <li><a href="#">Профсоюз сотрудников</a></li>
                             <li><a href="#">Профсоюз студентов</a></li>
@@ -167,9 +167,9 @@
                 <li><a href="#">Учебно-спортивный комплекс</a></li>
                 <li class="has-submenu">
                     <a href="#">Менеджмент качества</a>
-                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#right"/> </svg></div>
+                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#right"/> </svg></div>
                     <div class="side_menu__submenu">
-                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#left"/></svg></div>
+                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#left"/></svg></div>
                         <ul>
                             <li><a href="#">Политика в области качества</a></li>
                             <li><a href="#">Документы ИСМ</a></li>
@@ -185,9 +185,9 @@
                 </li>
                 <li class="has-submenu">
                     <a href="#">Оплата услуг</a>
-                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#right"/> </svg></div>
+                    <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#right"/> </svg></div>
                     <div class="side_menu__submenu">
-                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="img/arrows.svg#left"/></svg></div>
+                        <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#left"/></svg></div>
                         <ul>
                             <li><a href="#">Банковские реквизиты</a></li>
                             <li><a href="#">Оплата за обучение</a></li>
@@ -198,17 +198,17 @@
             </ul>
         </div>
         <div class="socials">
-            <a href="https://vk.com/infolgtu" target="_blank"><svg width="36" height="36"><use xlink:href="img/socials.svg#vk"/></svg></a>
-            <a href="https://t.me/infolgtu" target="_blank"><svg width="36" height="36"><use xlink:href="img/socials.svg#telegram"/></svg></a>
-            <a href="https://rutube.ru/channel/23637735/" target="_blank"><svg width="36" height="36"><use xlink:href="img/socials.svg#rutube"/></svg></a>
-            <a href="https://zen.yandex.ru/id/622e3374a592853404043d2b" target="_blank"><svg width="36" height="36"><use xlink:href="img/socials.svg#dzen"/></svg></a>
-            <a href="https://ok.ru/group/54350853243051" target="_blank"><svg width="36" height="36"><use xlink:href="img/socials.svg#ok"/></svg></a>
-            <a href="https://www.youtube.com/channel/UCpNTU2trtnplKH4mXVNW-Rg?view_as=subscriber" target="_blank"><svg width="36" height="36"><use xlink:href="img/socials.svg#youtube"/></svg></a>
+            <a href="https://vk.com/infolgtu" target="_blank"><svg width="36" height="36"><use xlink:href="/assets/img/socials.svg#vk"/></svg></a>
+            <a href="https://t.me/infolgtu" target="_blank"><svg width="36" height="36"><use xlink:href="/assets/img/socials.svg#telegram"/></svg></a>
+            <a href="https://rutube.ru/channel/23637735/" target="_blank"><svg width="36" height="36"><use xlink:href="/assets/img/socials.svg#rutube"/></svg></a>
+            <a href="https://zen.yandex.ru/id/622e3374a592853404043d2b" target="_blank"><svg width="36" height="36"><use xlink:href="/assets/img/socials.svg#dzen"/></svg></a>
+            <a href="https://ok.ru/group/54350853243051" target="_blank"><svg width="36" height="36"><use xlink:href="/assets/img/socials.svg#ok"/></svg></a>
+            <a href="https://www.youtube.com/channel/UCpNTU2trtnplKH4mXVNW-Rg?view_as=subscriber" target="_blank"><svg width="36" height="36"><use xlink:href="/assets/img/socials.svg#youtube"/></svg></a>
         </div>
         <div class="side_menu__mobile">
             <button class="sidebar_button sidebar_button--language">EN</button>
-            <a href="https://mb.stu.lipetsk.ru/" class="sidebar_button" target="_blank"><svg width="26" height="26"><use xlink:href="img/icons.svg#envelope" /></svg></a>
-            <button class="sidebar_button"><svg width="32" height="32"><use xlink:href="img/icons.svg#eye" /></svg></button>
+            <a href="https://mb.stu.lipetsk.ru/" class="sidebar_button" target="_blank"><svg width="26" height="26"><use xlink:href="/assets/img/icons.svg#envelope" /></svg></a>
+            <button class="sidebar_button"><svg width="32" height="32"><use xlink:href="/assets/img/icons.svg#eye" /></svg></button>
         </div>
     </div>
 </div>
@@ -217,8 +217,8 @@
         <span class="burger"></span>
     </button>
     <div class="mobile-header">
-        <button class="sidebar_button mobile-header__button--search search-open"><svg width="32" height="32"><use xlink:href="img/icons.svg#search" /></svg></button>
-        <a href="https://lk.stu.lipetsk.ru" class="sidebar_button mobile-header__button--lk"><svg width="32" height="32"><use xlink:href="img/icons.svg#profile" /></svg></a>
+        <button class="sidebar_button mobile-header__button--search search-open"><svg width="32" height="32"><use xlink:href="/assets/img/icons.svg#search" /></svg></button>
+        <a href="https://lk.stu.lipetsk.ru" class="sidebar_button mobile-header__button--lk"><svg width="32" height="32"><use xlink:href="/assets/img/icons.svg#profile" /></svg></a>
         <a href="/" class="logo mobile-header__logo">
             ЛИПЕЦКИЙ<br />ПОЛИТЕХ
         </a>

@@ -1,0 +1,20 @@
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: {
+    duration: var(--accordion-duration, .4s);
+    property: var(--accordion-property, max-height, margin-top, margin-bottom);
+  };
+}
+.accordion {
+  &.opened .accordion-content {
+    max-height: unset;
+    overflow: visible;
+  }
+  &:not(.opened) .accordion-trigger__opened {
+    display: none;
+  }
+  &.opened .accordion-trigger__closed {
+    display: none;
+  }
+}

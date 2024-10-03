@@ -1,5 +1,6 @@
 import './bootstrap';
 import {initNewsArchive} from "./news.js";
+import {initAccordions} from "./accordion";
 
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.tabs').forEach(function(wrapper) {
@@ -30,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Страница новостей
   initNewsArchive();
+
+  // Аккордеоны
+  initAccordions();
 });
 
 

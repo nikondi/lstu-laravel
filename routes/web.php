@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StaticsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,9 +15,11 @@ Route::get('/fak', function () {
     return view('fak');
 })->name('fak');
 
-Route::get('/static', function () {
-    return view('static');
-})->name('static');
+Route::get('/static', StaticsController::class)->name('static');
+Route::controller(StaticsController::class)->group(function() {
+    Route::get('/management', 'management')->name('management');
+});
+
 
 Route::prefix('news')->name('news.')->group(function() {
     Route::get('', function () {
