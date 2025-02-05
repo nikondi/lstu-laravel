@@ -1,6 +1,7 @@
 import './bootstrap';
-import {initNewsArchive} from "./news.js";
-import {initAccordions} from "./accordion";
+import {initNewsArchive} from "@/pages/news";
+import {initAccordions} from "@/accordion";
+import {initFakDirections, initFakMenu} from "@/pages/fak";
 
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.tabs').forEach(function(wrapper) {
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Страница факультета
   initFakMenu();
   initFakDirections();
+
   // Страница факультета
 
   // Страница новостей
@@ -43,6 +45,7 @@ function getScrollbarWidth() {
   const outer = document.createElement('div');
   outer.style.visibility = 'hidden';
   outer.style.overflow = 'scroll'; // forcing scrollbar to appear
+  // @ts-ignore
   outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
   document.body.appendChild(outer);
 
@@ -100,7 +103,7 @@ function initSearch() {
     lockBody();
     search_wrapper.classList.add('active');
     setTimeout(function() {
-      search_wrapper.querySelector('.search-form input').focus();
+      (search_wrapper.querySelector('.search-form input') as HTMLInputElement).focus();
     }, 200);
   }
 
@@ -157,17 +160,17 @@ function initMenu() {
   const close_buttons = side_menu.querySelectorAll('.side_menu__sub-close');
   open_buttons.forEach(function(button) {
     button.addEventListener('click', function() {
-      this.classList.add('active');
+      button.classList.add('active');
     });
   })
   close_buttons.forEach(function(button) {
     button.addEventListener('click', function() {
-      this.closest('.has-submenu').querySelector('.side_menu__sub-open').classList.remove('active');
+      button.closest('.has-submenu').querySelector('.side_menu__sub-open').classList.remove('active');
     });
   })
   side_menu.querySelectorAll('.side_menu__submenu').forEach(function(submenu) {
     submenu.addEventListener('click', function() {
-      this.closest('.has-submenu').querySelector('.side_menu__sub-open').classList.remove('active');
+      submenu.closest('.has-submenu').querySelector('.side_menu__sub-open').classList.remove('active');
     });
     submenu.querySelector('ul').addEventListener('click', function(e) {
       e.stopPropagation();
@@ -175,71 +178,3 @@ function initMenu() {
   })
 }
 
-function outsideClick(el, callback, exclude = null) {
-  document.addEventListener('click', function(event) {
-    if(el && !el.contains(event.target) && event.target !== exclude)
-      callback();
-  }, true);
-}
-
-function initFakMenu() {
-  const openMenu = (submenu) => submenu.classList.add('opened');
-  const closeMenu = (submenu) => submenu.classList.remove('opened');
-  document.querySelectorAll('.fak-submenu').forEach(function(submenu) {
-    const parent = submenu.parentNode;
-    const button = parent.querySelector('button');
-    if(!button)
-      return true;
-    button.addEventListener('click', function() {
-      if(submenu.classList.contains('opened'))
-        closeMenu(submenu);
-      else
-        openMenu(submenu);
-    });
-    outsideClick(submenu, () => closeMenu(submenu), button)
-  })
-}
-
-function initFakDirections() {
-  document.querySelectorAll('.direction').forEach(function(direction) {
-    const button = direction.querySelector('.direction__heading');
-    const content = direction.querySelector('.direction__content');
-
-    if(!button || !content)
-      return true;
-
-    const setContentHeight = () => {
-      content.style.overflow = 'hidden';
-      content.style.maxHeight = content.scrollHeight+'px'
-    };
-    const resetStyles = () => {
-      content.style.maxHeight = null;
-      content.style.overflow = null;
-    }
-    const handleTransitionEnd = (e) => {
-      if(!e || e.target !== content || e.propertyName !== 'max-height')
-        return;
-      resetStyles();
-    };
-    const open = () => {
-      setContentHeight(content);
-      direction.classList.add('opened');
-      content.addEventListener('transitionend', handleTransitionEnd);
-    };
-    const close = () => {
-      setContentHeight(content);
-      content.removeEventListener('transitionend', handleTransitionEnd);
-      setTimeout(function() {
-        direction.classList.remove('opened');
-        resetStyles();
-      });
-    };
-
-    button.addEventListener('click', function() {
-      if(direction.classList.contains('opened'))
-        close(direction);
-      else
-        open(direction);
-    });
-  });
-}

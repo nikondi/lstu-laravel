@@ -1,19 +1,17 @@
 <?php
 
+use App\Http\Controllers\FakController;
 use App\Http\Controllers\StaticsController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/', WelcomeController::class)->name('welcome');
 
 Route::get('/abit', function () {
     return view('abit');
 })->name('abit');
 
-Route::get('/fak', function () {
-    return view('fak');
-})->name('fak');
+Route::get('/fak', FakController::class)->name('fak');
 
 Route::get('/static', StaticsController::class)->name('static');
 Route::controller(StaticsController::class)->group(function() {

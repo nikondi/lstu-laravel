@@ -7,14 +7,13 @@
     <title>ЛГТУ</title>
     <link rel="stylesheet" href="{{ asset('/fonts/Montserrat/stylesheet.css') }}">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
+    @vite('resources/css/styles.scss')
 </head>
 <body>
 <div class="wrapper">
     @include('parts.sidebar')
     <main class="page-content">
-{{--        @include('parts.frontbar')--}}
+        {{--@include('parts.frontbar')--}}
         @yield('content')
     </main>
 </div>
@@ -27,10 +26,8 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 @vite([
-    'resources/js/js.js',
-    'resources/js/main.js'
+    'resources/js/js.ts',
 ])
 </body>
 </html>

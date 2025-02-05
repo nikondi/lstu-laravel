@@ -1,10 +1,14 @@
+import Swiper from "swiper";
+import {Pagination} from "swiper/modules";
+
 function initBanners() {
-  const main_banners = document.querySelector('.main_banners');
+  const main_banners = document.querySelector('.main_banners') as HTMLElement;
   if(!main_banners)
     return;
   new Swiper(main_banners, {
+    modules: [Pagination],
     pagination: {
-      el: main_banners.querySelector('.swiper-pagination'),
+      el: main_banners.querySelector('.swiper-pagination') as HTMLElement,
       clickable: true,
     },
     loop: true,
@@ -15,12 +19,13 @@ function initBanners() {
 }
 
 function initAnnouncement() {
-  const announcement = document.querySelector('.events');
+  const announcement = document.querySelector('.events') as HTMLElement;
   if(!announcement)
     return;
   new Swiper(announcement, {
+    modules: [Pagination],
     pagination: {
-      el: announcement.querySelector('.swiper-pagination'),
+      el: announcement.querySelector('.swiper-pagination') as HTMLElement,
       clickable: true,
     },
     navigation: {
@@ -32,19 +37,20 @@ function initAnnouncement() {
 }
 
 function initFaks() {
-  const faks = document.querySelector('.fak-slider');
+  const faks = document.querySelector('.fak-slider') as HTMLElement;
   if(!faks)
     return;
 
   const media = window.matchMedia("(max-width: 767px)");
 
-  let slider = null;
+  let slider: Swiper = null;
 
   const controlSlider = () => {
     if(media.matches) {
       slider = new Swiper(faks, {
+        modules: [Pagination],
         pagination: {
-          el: faks.querySelector('.swiper-pagination'),
+          el: faks.querySelector('.swiper-pagination') as HTMLElement,
           clickable: true,
         },
         navigation: {
@@ -54,14 +60,12 @@ function initFaks() {
         loop: true,
       });
     } else if(slider) {
-      console.log(slider);
       slider.destroy();
     }
   }
 
   controlSlider();
   media.addEventListener('change', controlSlider);
-
 }
 
 document.addEventListener('DOMContentLoaded', function() {
