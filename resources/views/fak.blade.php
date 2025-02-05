@@ -199,6 +199,25 @@
             </div>
         </div>
     </section>
+
+    <section class="fak-partners">
+        <div class="container">
+            <h2 class="heading-2">Партнеры ИКН</h2>
+
+            <div class="swiper fak-partners-slider">
+                <div class="swiper-wrapper">
+                        @foreach(\Illuminate\Support\Facades\Storage::disk('public')->files('fak/IKN/partners') as $file)
+                            <div class="swiper-slide fak-partner">
+                                <a href="#">
+                                    <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($file) }}" title="{{ $file }}" alt="">
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+            </div>
+        </div>
+    </section>
+
     <section class="fak-news">
         <div class="container">
             <div class="tabs">

@@ -1,7 +1,10 @@
 import './bootstrap';
+
+import "swiper/css";
+
 import {initNewsArchive} from "@/pages/news";
 import {initAccordions} from "@/accordion";
-import {initFakDirections, initFakMenu} from "@/pages/fak";
+import fakPage from "@/pages/fak";
 
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.tabs').forEach(function(wrapper) {
@@ -26,9 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initSearch();
 
   // Страница факультета
-  initFakMenu();
-  initFakDirections();
-
+  fakPage();
   // Страница факультета
 
   // Страница новостей

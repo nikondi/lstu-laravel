@@ -1,6 +1,14 @@
 import {outsideClick} from "@/helpers";
+import {accordion} from "@/accordion";
+import Swiper from "swiper";
 
-export function initFakMenu() {
+export default function fakPage() {
+  initFakPartners();
+  initMenu();
+  initDirections();
+}
+
+function initMenu() {
   const openMenu = (submenu: Element) => submenu.classList.add('opened');
   const closeMenu = (submenu: Element) => submenu.classList.remove('opened');
   document.querySelectorAll('.fak-submenu').forEach(function(submenu) {
@@ -18,46 +26,27 @@ export function initFakMenu() {
   })
 }
 
-export function initFakDirections() {
+function initDirections() {
   document.querySelectorAll('.direction').forEach(function(direction) {
-    const button = direction.querySelector('.direction__heading');
+    const button = direction.querySelector('.direction__heading') as HTMLElement;
     const content = direction.querySelector('.direction__content') as HTMLElement;
 
     if(!button || !content)
       return true;
 
-    const setContentHeight = () => {
-      content.style.overflow = 'hidden';
-      content.style.maxHeight = content.scrollHeight+'px'
-    };
-    const resetStyles = () => {
-      content.style.maxHeight = null;
-      content.style.overflow = null;
-    }
-    const handleTransitionEnd = (e: TransitionEvent) => {
-      if(!e || e.target !== content || e.propertyName !== 'max-height')
-        return;
-      resetStyles();
-    };
-    const open = () => {
-      setContentHeight();
-      direction.classList.add('opened');
-      content.addEventListener('transitionend', handleTransitionEnd);
-    };
-    const close = () => {
-      setContentHeight();
-      content.removeEventListener('transitionend', handleTransitionEnd);
-      setTimeout(function() {
-        direction.classList.remove('opened');
-        resetStyles();
-      });
-    };
-
-    button.addEventListener('click', function() {
-      if(direction.classList.contains('opened'))
-        close();
-      else
-        open();
-    });
+    const _accordion = accordion(direction, button, content);
+    button.addEventListener('click', _accordion.toggle);
   });
 }
+
+function initFakPartners() {
+  const elem = document.querySelector('.fak-partners-slider') as HTMLElement;
+  if(!elem)
+    return;
+
+  new Swiper(elem, {
+    slidesPerView: 'auto',
+    spaceBetween: 20
+  });
+}
+
