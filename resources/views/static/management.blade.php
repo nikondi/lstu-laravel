@@ -13,10 +13,11 @@
         <h1 class="management__h1">Ректор</h1>
         <x-rector name="Загеева Лилия Александровна" position="Ректор, кандидат экономических наук, доцент" image="https://stu.lipetsk.ru/assets/gallery/900/6865.jpg" class="rector-single--rector">
             <x-slot:menu>
-                <ul class="lstu-pagemenu"><li class="first"><a href="struct/management/rector/sub/buh/" title="Бухгалтерия" >Бухгалтерия</a></li>
-                    <li><a href="struct/management/rector/sub/hr/" title="Отдел кадров" >Отдел кадров</a></li>
-                    <li><a href="struct/management/rector/sub/spec.html" title="Специальный отдел" >Специальный отдел</a></li>
-                    <li class="last"><a href="struct/management/rector/sub/pk/" title="Приемная комиссия" >Приемная комиссия</a></li>
+                <ul>
+                    <li><a href="https://www.stu.lipetsk.ru/struct/management/rector/sub/buh/" title="Бухгалтерия" >Бухгалтерия</a></li>
+                    <li><a href="https://www.stu.lipetsk.ru/struct/management/rector/sub/hr/" title="Отдел кадров" >Отдел кадров</a></li>
+                    <li><a href="https://www.stu.lipetsk.ru/struct/management/rector/sub/spec.html" title="Специальный отдел" >Специальный отдел</a></li>
+                    <li><a href="struct/management/rector/sub/pk/" title="Приемная комиссия" >Приемная комиссия</a></li>
                 </ul>
             </x-slot:menu>
 

@@ -47,8 +47,7 @@
     ul {
       list-style: none;
       li {
-        &:not(:last-child) {
-        }
+        display: flex;
         a {
           color: #4f91ff;
           text-decoration: none;
@@ -62,6 +61,7 @@
         &:before {
           content: '-';
           margin-right: 5px;
+          align-self: start;
         }
       }
     }
