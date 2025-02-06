@@ -42,10 +42,51 @@
   }
 }
 
+
 .swiper-button-prev,
 .swiper-button-next {
   cursor: pointer;
   &.swiper-button-disabled {
     cursor: default;
+  }
+}
+
+
+.slider-pagination {
+  &.swiper-pagination {
+    display: flex;
+    padding: 0 15px;
+    z-index: 10;
+    column-gap: var(--slider-pagination-gap, 2px);
+    position: static;
+  }
+
+  &--center.swiper-pagination {
+    margin: 0 auto;
+  }
+
+  .swiper-pagination-bullet {
+    cursor: pointer;
+    padding: 2px;
+
+    &:before {
+      content: '';
+      box-sizing: border-box;
+      width: var(--slider-pagination-size, 12px);
+      height: var(--slider-pagination-size, 12px);
+      display: block;
+      border: 1px solid var(--slider-pagination-color, #ffffff);
+      border-radius: 50%;
+      transition-property: opacity, color, background-color;
+      transition-duration: .3s;
+      background-color: var(--slider-pagination-background, rgba(0, 0, 0, .25));
+    }
+
+    &.swiper-pagination-bullet-active {
+      &:before {
+        background-color: var(--slider-pagination-color, #ffffff);
+      }
+      cursor: default;
+    }
   }
 }

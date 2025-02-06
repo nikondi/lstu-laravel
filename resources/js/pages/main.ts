@@ -68,8 +68,8 @@ function initFaks() {
   media.addEventListener('change', controlSlider);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+export default function mainPage() {
   initBanners();
   initAnnouncement();
   initFaks();
-});
+}

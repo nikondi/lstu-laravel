@@ -126,34 +126,6 @@ img {
   }
 }
 
-
-.slider-pagination {
-  &.swiper-pagination {
-    text-align: left;
-    padding: 0 17px;
-  }
-
-  &--center.swiper-pagination {
-    text-align: center;
-  }
-
-  .swiper-pagination-bullet {
-    --swiper-pagination-bullet-width: 10px;
-    --swiper-pagination-bullet-height: 10px;
-    border: 1px solid #ffffff;
-    transition-property: background-color;
-    transition-duration: .3s;
-    --swiper-pagination-bullet-inactive-opacity: 1;
-    --swiper-pagination-bullet-inactive-color: rgba(0, 0, 0, .25);
-    --swiper-pagination-bullet-horizontal-gap: 2px;
-  }
-
-  .swiper-pagination-bullet-active {
-    box-shadow: 0 2px 4px 0 rgba(#000000, .4);
-    background-color: #fff;
-  }
-}
-
 .history-banner {
   padding: 35px 30px;
   display: flex;
@@ -234,13 +206,15 @@ img {
 
 .fak-slider {
   .swiper-pagination {
-    position: static;
-    margin: 10px auto 0;
-    --swiper-pagination-color: #132d55;
+    margin: 15px auto;
+    width: auto;
+    justify-content: center;
 
     .swiper-pagination-bullet {
-      transition-property: opacity, color;
-      transition-duration: .3s;
+      display: block;
+      --slider-pagination-color: #132D55;
+      --slider-pagination-background: rgba(0,0,0,0);
+      --slider-pagination-gap: 1px;
     }
 
     @media (min-width: 768px) {

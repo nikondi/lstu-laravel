@@ -5,6 +5,7 @@ import "swiper/css";
 import {initNewsArchive} from "@/pages/news";
 import {initAccordions} from "@/accordion";
 import fakPage from "@/pages/fak";
+import mainPage from "@/pages/main";
 
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.tabs').forEach(function(wrapper) {
@@ -37,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Аккордеоны
   initAccordions();
+
+  // Главная страница
+  mainPage();
 });
 
 

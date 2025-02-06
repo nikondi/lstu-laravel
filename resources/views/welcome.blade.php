@@ -124,7 +124,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination slider-pagination slider-pagination--center"></div>
             </div>
         </div>
     </section>
