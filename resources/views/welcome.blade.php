@@ -277,9 +277,13 @@
                             <div class="swiper-slide"><img src="/assets/img/announcement/2.jpg" alt=""></div>
                             <div class="swiper-slide"><img src="/assets/img/announcement/3.jpg" alt=""></div>
                         </div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-pagination slider-pagination slider-pagination--center"></div>
+                        <div class="swiper-button-prev">
+                            <svg width="1em" height="1em"><use xlink:href="/assets/img/arrows.svg#left"/> </svg>
+                        </div>
+                        <div class="swiper-button-next">
+                            <svg width="1em" height="1em"><use xlink:href="/assets/img/arrows.svg#right"/> </svg>
+                        </div>
+                        <div class="swiper-pagination slider-pagination"></div>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import {Pagination} from "swiper/modules";
+import {Navigation, Pagination} from "swiper/modules";
 
 function initBanners() {
   const main_banners = document.querySelector('.main_banners') as HTMLElement;
@@ -23,14 +23,14 @@ function initAnnouncement() {
   if(!announcement)
     return;
   new Swiper(announcement, {
-    modules: [Pagination],
+    modules: [Pagination, Navigation],
     pagination: {
       el: announcement.querySelector('.swiper-pagination') as HTMLElement,
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+      nextEl: announcement.querySelector('.swiper-button-next') as HTMLElement,
+      prevEl: announcement.querySelector('.swiper-button-prev') as HTMLElement
     },
     loop: true,
   });
