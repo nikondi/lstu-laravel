@@ -1,11 +1,13 @@
 import {outsideClick} from "@/helpers";
 import {accordion} from "@/accordion";
 import Swiper from "swiper";
+import {Navigation} from "swiper/modules";
 
 export default function fakPage() {
-  initFakPartners();
+  initPartners();
   initMenu();
   initDirections();
+  initGraduates();
 }
 
 function initMenu() {
@@ -39,7 +41,7 @@ function initDirections() {
   });
 }
 
-function initFakPartners() {
+function initPartners() {
   const elem = document.querySelector('.fak-partners-slider') as HTMLElement;
   if(!elem)
     return;
@@ -47,6 +49,36 @@ function initFakPartners() {
   new Swiper(elem, {
     slidesPerView: 'auto',
     spaceBetween: 20
+  });
+}
+
+function initGraduates() {
+  const elem = document.querySelector('.fak-graduates-slider') as HTMLElement;
+  if(!elem)
+    return;
+
+  const prev_button = elem.querySelector('.swiper-button-prev') as HTMLElement;
+  const next_button = elem.querySelector('.swiper-button-next') as HTMLElement;
+
+  new Swiper(elem, {
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: next_button,
+      prevEl: prev_button,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 3
+      },
+      576: {
+        slidesPerView: 2
+      }
+    }
   });
 }
 

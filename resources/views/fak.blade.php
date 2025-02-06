@@ -218,6 +218,66 @@
         </div>
     </section>
 
+    <section class="fak-graduates">
+        <div class="container">
+            <div class="swiper fak-graduates-slider">
+                <div class="slider-heading">
+                    <h2 class="heading-2">Выдающиеся выпускники</h2>
+                    <div class="slider-heading__buttons">
+                        <div class="swiper-button-prev">
+                            <svg width="1em" height="1em">
+                                <use xlink:href="http://localhost/assets/img/arrows.svg#left"></use>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next">
+                            <svg width="1em" height="1em">
+                                <use xlink:href="http://localhost/assets/img/arrows.svg#right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-wrapper">
+                    <div class="fak-graduate swiper-slide">
+                        <div class="fak-graduate__image">
+                            <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url('/fak/IKN/graduates/trubnikov.png') }}" alt="">
+                        </div>
+                        <div class="fak-graduate__position">академик РАН, директор Объединённого института ядерных исследований</div>
+                        <div class="fak-graduate__name">Трубников Григорий Владимирович</div>
+                    </div>
+                    <div class="fak-graduate swiper-slide">
+                        <div class="fak-graduate__image">
+                            <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url('/fak/IKN/graduates/trubnikov.png') }}" alt="">
+                        </div>
+                        <div class="fak-graduate__position">академик РАН, директор Объединённого института ядерных исследований</div>
+                        <div class="fak-graduate__name">Трубников Григорий Владимирович</div>
+                    </div>
+                    <div class="fak-graduate swiper-slide">
+                        <div class="fak-graduate__image">
+                            <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url('/fak/IKN/graduates/trubnikov.png') }}" alt="">
+                        </div>
+                        <div class="fak-graduate__position">академик РАН, директор Объединённого института ядерных исследований</div>
+                        <div class="fak-graduate__name">Трубников Григорий Владимирович</div>
+                    </div>
+                    <div class="fak-graduate swiper-slide">
+                        <div class="fak-graduate__image">
+                            <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url('/fak/IKN/graduates/trubnikov.png') }}" alt="">
+                        </div>
+                        <div class="fak-graduate__position">академик РАН, директор Объединённого института ядерных исследований</div>
+                        <div class="fak-graduate__name">Трубников Григорий Владимирович</div>
+                    </div>
+                    <div class="fak-graduate swiper-slide">
+                        <div class="fak-graduate__image">
+                            <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url('/fak/IKN/graduates/chebotarev.png') }}" alt="">
+                        </div>
+                        <div class="fak-graduate__position">академик РАН, директор Объединённого института ядерных исследований</div>
+                        <div class="fak-graduate__name">Трубников Григорий Владимирович</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="fak-news">
         <div class="container">
             <div class="tabs">

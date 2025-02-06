@@ -1,0 +1,51 @@
+.slider-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+  margin-bottom: 20px;
+
+  .heading-1,
+  .heading-2 {
+    margin-bottom: 0;
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: 10px;
+    font-size: 16px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      border-radius: 4px;
+      box-shadow: 0 0 4px 0 rgba(40, 40, 40, 0.3);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: {
+        duration: .3s;
+        property: opacity, color, background-color;
+      };
+      &.swiper-button-disabled {
+        opacity: .5;
+      }
+      &:not(.swiper-button-disabled):hover {
+        background-color: #132D55;
+        color: #FFFFFF;
+      }
+      svg {
+        display: block;
+      }
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  cursor: pointer;
+  &.swiper-button-disabled {
+    cursor: default;
+  }
+}
