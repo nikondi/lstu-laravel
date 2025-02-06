@@ -6,8 +6,8 @@ export default defineConfig({
     laravel({
       input: [
         'resources/css/styles.scss',
-        'resources/js/js.ts',
-        'resources/js/frontbar.ts',
+        'resources/js/app.ts',
+        'resources/js/components/frontbar.ts',
         'resources/css/frontbar.scss'
       ],
       refresh: true,

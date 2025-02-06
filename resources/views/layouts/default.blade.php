@@ -27,7 +27,7 @@
 
 
 @vite([
-    'resources/js/js.ts',
+    'resources/js/app.ts',
 ])
 </body>
 </html>
