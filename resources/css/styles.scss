@@ -85,6 +85,7 @@ img {
 @import "components/pagination";
 @import "components/accordion";
 @import "components/sliders";
+@import "components/news-slider";
 
 @import "pages/main";
 @import "pages/abit";
@@ -712,7 +713,10 @@ img {
   }
 
   @media (max-width: 767px) {
-    --swiper-navigation-size: 30px;
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
   }
 }
 

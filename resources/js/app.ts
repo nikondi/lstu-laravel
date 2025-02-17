@@ -6,6 +6,7 @@ import {initNewsArchive} from "@/pages/news";
 import {initAccordions} from "@/accordion";
 import fakPage from "@/pages/fak";
 import mainPage from "@/pages/main";
+import initNewsSliders from "@/components/news-slider";
 
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.tabs').forEach(function(wrapper) {
@@ -41,6 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Главная страница
   mainPage();
+
+  // Новости в слайдере
+  initNewsSliders();
 });
 
 

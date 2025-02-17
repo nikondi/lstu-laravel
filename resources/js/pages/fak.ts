@@ -70,13 +70,13 @@ function initGraduates() {
     },
     breakpoints: {
       1024: {
-        slidesPerView: 4,
+        slidesPerView: 5,
       },
       768: {
-        slidesPerView: 3
+        slidesPerView: 4
       },
       576: {
-        slidesPerView: 2
+        slidesPerView: 3
       }
     }
   });

@@ -278,57 +278,38 @@
         </div>
     </section>
 
-    <section class="fak-news">
+    <section class="fak-news slider-wrapper">
         <div class="container">
-            <div class="tabs">
-                <div class="tabs-header">
-                    <div class="active">Новости</div>
-                    <div>Объявления</div>
+            <div class="swiper news-slider">
+                <div class="slider-heading">
+                    <h2 class="heading-2">Новости</h2>
+                    <div class="slider-heading__buttons">
+                        <div class="swiper-button-prev">
+                            <svg width="1em" height="1em">
+                                <use xlink:href="http://localhost/assets/img/arrows.svg#left"></use>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next">
+                            <svg width="1em" height="1em">
+                                <use xlink:href="http://localhost/assets/img/arrows.svg#right"></use>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <div class="tabs-contents">
-                    <div class="active">
-                        <div class="news-wrapper">
-                            @foreach($news as $i => $item)
-                                <a href="#" class="news_item">
-                                    <div class="news_item__image">
-                                        <img src="/assets/img/news/<?= $i == 0?'big':$i ?>.png" alt="">
-                                    </div>
-                                    <div class="news_item__content">
-                                        <div class="news_date">{{ $item['date'] }}</div>
-                                        <div class="news_item__title">{{ $item['title'] }}</div>
-                                        <div class="news_item__description">{{ $item['desc'] }}</div>
-                                    </div>
-                                </a>
-                            @endforeach
+
+                <div class="swiper-wrapper">
+                    @foreach($news as $card)
+                        <div class="swiper-slide">
+                            <a href="#" class="news-slider-card">
+                                <div class="news-slider-card__image">
+                                    <img src="/assets/img/news/1.jpg" alt=""/>
+                                </div>
+                                <div class="news-slider-card__date">{{ $card['date'] }}</div>
+                                <div class="news-slider-card__title">{{ $card['title'] }}</div>
+                                <div class="news-slider-card__description">{{ $card['desc'] }}</div>
+                            </a>
                         </div>
-                        <div class="main_news__more">
-                            <a href="https://www.stu.lipetsk.ru/news/" class="btn btn--outlined">Подробнее</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="announcements">
-                            @foreach($announcements as $announcement)
-                                <a href="#" class="announcement">
-                                    <div class="announcement-content">
-                                        <div class="announcement-content__title"><?= $announcement['title']; ?></div>
-                                        @if(!empty($announcement['link']))
-                                            <div class="announcement-content__description"><?= $announcement['description']; ?></div>
-                                        @endif
-                                    </div>
-                                    <div class="announcement-date">
-                                        <div class="announcement-date__date">
-                                            <div>{{ explode(' ', $announcement['date'])[0] }}</div>
-                                            {{ explode(' ', $announcement['date'])[1] }}
-                                        </div>
-                                        <div class="announcement-date__year">2024</div>
-                                    </div>
-                                </a>
-                            @endforeach
-                        </div>
-                        <div class="main_news__more">
-                            <a href="https://www.stu.lipetsk.ru/struct/council/obyavleniya/" class="btn btn--outlined">Подробнее</a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

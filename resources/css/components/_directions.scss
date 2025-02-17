@@ -1,105 +1,116 @@
 .direction {
-    background-color: #ffffff;
-    box-shadow: 0 0 15px 0 rgba(#282828, .1);
-    border-radius: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    &__heading {
-        font-weight: 500;
+  background-color: #ffffff;
+  box-shadow: 0 0 12px 0 rgba(76, 76, 76, 0.2);
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &__heading {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 12px 20px 12px 30px;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 0;
+      width: 21px;
+      height: 21px;
+      background: url("/assets/img/plus.svg") no-repeat center center;
+      transform-origin: 50% 50%;
+      transition: .4s transform;
+    }
+  }
+
+  &__content {
+    border-top-width: 0;
+    border-top-style: solid;
+    border-top-color: #D9D9D9;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition-property: border-top-width, visibility, max-height;
+    transition-duration: .4s;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      padding-top: 10px;
+      padding-left: 6px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333333;
+      transition: .2s color;
+
+      &:hover {
+        color: #777777;
+      }
+    }
+
+    ul {
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+      li {
+        padding-left: 40px;
         font-size: 16px;
-        padding: 12px 20px 12px 30px;
+        list-style: none;
         position: relative;
-        cursor: pointer;
-        &:before {
-            content: '';
-            position: absolute;
-            top: 12px;
-            left: 0;
-            width: 21px;
-            height: 21px;
-            background: url("/assets/img/plus.svg") no-repeat center center;
-            transform-origin: 50% 50%;
-            transition: .4s transform;
+
+        &:not(:last-child) {
+          margin-bottom: 0.9em;
         }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 9px;
+          left: 10px;
+          background-color: #626262;
+          height: 1px;
+          width: 15px;
+        }
+      }
+    }
+  }
+
+  &.opened &__heading:before {
+    transform: rotate(45deg);
+  }
+
+  &.opened &__content {
+    border-top: 1px solid #D9D9D9;
+    overflow: visible;
+    visibility: visible;
+    max-height: unset;
+  }
+
+  @media (max-width: 767px) {
+    &__heading {
+      font-size: 15px;
     }
     &__content {
-        border-top-width: 0;
-        border-top-style: solid;
-        border-top-color: #D9D9D9;
-        visibility: hidden;
-        max-height: 0;
-        overflow: hidden;
-        transition-property: border-top-width, visibility, max-height;
-        transition-duration: .4s;
+      h3 {
+        font-size: 15px;
+      }
 
-        h3 {
-            font-size: 18px;
-            font-weight: 500;
-            padding-top: 10px;
-            padding-left: 6px;
-        }
+      ul li {
+        font-size: 13px;
+        padding-left: 30px;
 
-        a {
-            text-decoration: none;
-            color: #333333;
-            transition: .2s color;
-            &:hover {
-                color: #777777;
-            }
+        &:before {
+          width: 10px;
         }
-
-        ul {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            li {
-                padding-left: 40px;
-                font-size: 16px;
-                list-style: none;
-                position: relative;
-
-                &:not(:last-child) {
-                    margin-bottom: 0.9em;
-                }
-                &:before {
-                    content: '';
-                    position: absolute;
-                    top: 9px;
-                    left: 10px;
-                    background-color: #626262;
-                    height: 1px;
-                    width: 15px;
-                }
-            }
-        }
+      }
     }
-    &.opened &__heading:before {
-        transform: rotate(45deg);
-    }
-    &.opened &__content {
-        border-top: 1px solid #D9D9D9;
-        overflow: visible;
-        visibility: visible;
-        max-height: unset;
-    }
-    @media (max-width: 767px) {
-        &__heading {
-            font-size: 15px;
-        }
-        &__content {
-            h3 {
-                font-size: 15px;
-            }
-            ul li {
-                font-size: 13px;
-                padding-left: 30px;
-                &:before {
-                    width: 10px;
-                }
-            }
-        }
-    }
+  }
 }
 
 .directions-list .direction:not(:last-child) {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
