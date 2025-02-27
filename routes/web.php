@@ -11,7 +11,11 @@ Route::get('/abit', function () {
     return view('abit');
 })->name('abit');
 
+
 Route::get('/fak', FakController::class)->name('fak');
+Route::prefix('/fak/')->name('fak.')->group(function () {
+    Route::get('/staff/', [FakController::class, 'staff'])->name('staff');
+});
 
 Route::get('/static', StaticsController::class)->name('static');
 Route::controller(StaticsController::class)->group(function() {

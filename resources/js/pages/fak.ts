@@ -2,12 +2,15 @@ import {outsideClick} from "@/helpers";
 import {accordion} from "@/accordion";
 import Swiper from "swiper";
 import {Navigation} from "swiper/modules";
+import {openPopup} from "@/components/popup";
 
 export default function fakPage() {
   initPartners();
   initMenu();
   initDirections();
   initGraduates();
+
+  initStaff();
 }
 
 function initMenu() {
@@ -82,3 +85,15 @@ function initGraduates() {
   });
 }
 
+function initStaff() {
+  document.querySelectorAll('.employee-card__button').forEach(function(button) {
+    const wrapper = button.closest('.employee-card');
+    const popup = wrapper.querySelector('.employee-popup');
+    if(!popup)
+      return true;
+
+    button.addEventListener('click', function() {
+      openPopup(popup);
+    });
+  })
+}
