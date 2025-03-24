@@ -18,6 +18,7 @@
                     <div class="staff-item">
                         <div class="employee-card">
                             <div class="employee-card__image"><img src="{{ $employee['image'] }}" alt=""></div>
+                            {{-- TODO: Cut position --}}
                             <div class="employee-card__position">{{ $employee['position'] }}</div>
                             <div class="employee-card__name">{{ $employee['name'] }}</div>
                             @if(!empty($employee['academic']))

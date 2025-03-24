@@ -58,21 +58,21 @@
                     </div>
                 </li>
                 <li class="has-submenu">
-                    <a href="#">Факультеты, институты</a>
+                    <a href={{ route('fak.index') }}>Факультеты, институты</a>
                     <div class="side_menu__sub-open"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#right"/></svg></div>
                     <div class="side_menu__submenu">
                         <div class="side_menu__sub-close"><svg height="1.1em" width="1.1em"><use xlink:href="/assets/img/arrows.svg#left"/></svg></div>
                         <ul>
-                            <li><a href="#">Институт машиностроения и транспорта</a></li>
-                            <li><a href="#">Металлургический институт</a></li>
-                            <li><a href="#">Институт социальных наук экономики и права</a></li>
-                            <li><a href="#">Институт строительства и архитектуры</a></li>
-                            <li><a href="#">Физико-энергетический институт</a></li>
-                            <li><a href="#">Институт компьютерных наук</a></li>
-                            <li><a href="#">Заочный факультет</a></li>
-                            <li><a href="#">Факультет дополнительного образования</a></li>
-                            <li><a href="#">Университетский колледж</a></li>
-                            <li><a href="#">Научно-исследовательский институт</a></li>
+                            <li><a href="{{ route('fak.show') }}">Институт машиностроения и транспорта</a></li>
+                            <li><a href="{{ route('fak.show') }}">Металлургический институт</a></li>
+                            <li><a href="{{ route('fak.show') }}">Институт социальных наук экономики и права</a></li>
+                            <li><a href="{{ route('fak.show') }}">Институт строительства и архитектуры</a></li>
+                            <li><a href="{{ route('fak.show') }}">Физико-энергетический институт</a></li>
+                            <li><a href="{{ route('fak.show') }}">Институт компьютерных наук</a></li>
+                            <li><a href="{{ route('fak.show') }}">Заочный факультет</a></li>
+                            <li><a href="{{ route('fak.show') }}">Факультет дополнительного образования</a></li>
+                            <li><a href="{{ route('fak.show') }}">Университетский колледж</a></li>
+                            <li><a href="{{ route('fak.show') }}">Научно-исследовательский институт</a></li>
                         </ul>
                     </div>
                 </li>

@@ -12,9 +12,10 @@ Route::get('/abit', function () {
 })->name('abit');
 
 
-Route::get('/fak', FakController::class)->name('fak');
 Route::prefix('/fak/')->name('fak.')->group(function () {
-    Route::get('/staff/', [FakController::class, 'staff'])->name('staff');
+    Route::get('/fak', [FakController::class, 'index'])->name('index');
+    Route::get('/staff', [FakController::class, 'staff'])->name('staff');
+    Route::get('/ikn', [FakController::class, 'show'])->name('show');
 });
 
 Route::get('/static', StaticsController::class)->name('static');
