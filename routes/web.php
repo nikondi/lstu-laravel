@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FakController;
 use App\Http\Controllers\StaticsController;
+use App\Http\Controllers\StructController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,3 +34,5 @@ Route::prefix('news')->name('news.')->group(function() {
         return view('news.single');
     })->name('single');
 });
+
+Route::get('/struct/dept', StructController::class);

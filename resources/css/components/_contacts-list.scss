@@ -1,0 +1,16 @@
+.contacts-list {
+  p {
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+  }
+  a {
+    text-decoration: none;
+    color: #555;
+    transition: .2s color;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+}

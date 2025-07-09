@@ -1,0 +1,106 @@
+.formatted-text {
+  p {
+    line-height: 1.3;
+
+    &:not(:last-child) {
+      margin-bottom: .7em
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-bottom: 1em
+    }
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 4px;
+    display: block;
+    height: auto
+  }
+
+  strong,
+  b {
+    font-weight: 600
+  }
+
+  ul,
+  ol {
+    padding-left: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 1em
+    }
+
+    li:not(:last-child) {
+      margin-bottom: .3em
+    }
+  }
+
+  hr {
+    border: 0;
+    height: 2px;
+    background-color: #ccc;
+    margin-bottom: 1em
+  }
+
+  .formatted-text .accordion {
+    transition-duration: .3s, .4s;
+    transition-property: background-color, padding-bottom;
+
+    &:not(:last-child) {
+      margin-bottom: 1em
+    }
+
+    &:hover {
+      background-color: #efefef
+    }
+
+    &.opened {
+      padding-bottom: 15px;
+
+      .accordion-content {
+        margin-top: 10px
+      }
+
+      .accordion-trigger:after {
+        transform: rotate(-180deg)
+      }
+    }
+  }
+
+
+  .accordion-trigger {
+    cursor: pointer;
+    padding: 7px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      transform-origin: 50% 30%;
+      transition: .4s transform;
+      background-image: url('/assets/img/icons/arrows/arrow-down.svg');
+      background-repeat: no-repeat;
+      background-size: 100%
+    }
+  }
+
+  .accordion-content {
+    padding-left: 10px;
+    padding-right: 10px
+  }
+}
