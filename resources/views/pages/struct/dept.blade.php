@@ -26,6 +26,18 @@
                     <p>Функционирование отдела способствует укреплению устойчивой деловой репутации и связей вуза, а
                         также формированию корпоративной культуры.</p>
 
+                    <div class="accordion">
+                        <div class="accordion-trigger">
+                            <h4>Положения</h4>
+                        </div>
+
+                        <div class="accordion-content">
+                            <p>[[LSTU_static_list_new? &amp;items=`819,
+                                868-874,892,460,493,893,894,461,494,462,495,496,895,899,900,901,464,466,467,469,922,881,884,888`
+                                &amp;container=`filelist`]]</p>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="service-sub">
                     <div class="service-sub__heading">Подразделения</div>
