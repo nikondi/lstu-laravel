@@ -1,0 +1,15 @@
+.celevoe-sliders {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  .swiper {
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 767px) {
+  .celevoe-sliders {
+    grid-template-columns: 1fr;
+  }
+}

@@ -10,6 +10,7 @@ import initNewsSliders from "@/components/news-slider";
 import {initPopups} from "@/components/popup";
 import servicePage from "@/pages/service";
 import "swiper/css/bundle";
+import {gallery} from "@/components";
 
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.tabs').forEach(function(wrapper) {
@@ -53,6 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Страница подразделения
   servicePage();
+
+  // components
+  gallery();
 });
 
 

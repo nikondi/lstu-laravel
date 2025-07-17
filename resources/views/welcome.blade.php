@@ -19,7 +19,7 @@
     </section>
     <section class="main_info">
         <div class="main_info__inner">
-            <a href="abit/czelevoe-obuchenie.html" class="btn history-banner__btn_question" style="margin-right: 0">ПОДРОБНО
+            <a href="{{ route('abit.celevoe') }}" class="btn history-banner__btn_question" style="margin-right: 0">ПОДРОБНО
                 О ЦЕЛЕВОМ ОБУЧЕНИИ</a>
         </div>
         <div class="main_info__inner">

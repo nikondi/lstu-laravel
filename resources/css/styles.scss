@@ -90,6 +90,7 @@ img {
 @import "components/popup";
 @import "components/contacts-list";
 @import "components/formatted-text";
+@import "components/gallery";
 
 @import "pages/main";
 @import "pages/abit";
@@ -98,6 +99,7 @@ img {
 @import "pages/news";
 @import "pages/management";
 @import "pages/service";
+@import "pages/celevoe";
 
 .heading-2 {
   font-size: 24px;
@@ -675,6 +677,7 @@ img {
 
 .events {
   margin: 0 auto;
+  width: 100%;
   max-width: 1440px;
   position: relative;
 
