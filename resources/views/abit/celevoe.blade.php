@@ -113,6 +113,21 @@
                     <div class="swiper-pagination slider-pagination"></div>
                 </div>
             </div>
+
+            <div class="celevoe-links">
+                <a href="https://minobrnauki.gov.ru/action/targeted_training/2025-2026/employers">
+                    <img alt="" src="https://minobrnauki.gov.ru/action/targeted_training/images/Работодатели.jpg" title="Работодатели" />
+                    <div>Работодатели (заказчики и<br />субъекты Российской Федерации)</div>
+                </a>
+                <a href="https://minobrnauki.gov.ru/action/targeted_training/2025-2026/universities">
+                    <img alt="" src="https://minobrnauki.gov.ru/action/targeted_training/images/Университеты.jpg" title="Университеты" />
+                    <div>Университеты</div>
+                </a>
+                <a href="https://minobrnauki.gov.ru/action/targeted_training/2025-2026/applicants">
+                    <img alt="" src="https://minobrnauki.gov.ru/action/targeted_training/images/Абитуриенты.jpg" title="Абитуриенты и обучающиеся" />
+                    <div>Абитуриенты и обучающиеся</div>
+                </a>
+            </div>
         </div>
     </section>
 
