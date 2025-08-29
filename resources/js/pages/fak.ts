@@ -95,5 +95,23 @@ function initStaff() {
     button.addEventListener('click', function() {
       openPopup(popup);
     });
+  });
+
+  document.querySelectorAll('.staff-slider').forEach((container) => {
+    new Swiper(container as HTMLElement, {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      breakpoints: {
+        1200: {
+          slidesPerView: 4
+        },
+        768: {
+          slidesPerView: 3
+        },
+        576: {
+          slidesPerView: 2
+        }
+      }
+    });
   })
 }

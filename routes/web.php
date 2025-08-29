@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AbitController;
 use App\Http\Controllers\FakController;
+use App\Http\Controllers\KafController;
 use App\Http\Controllers\StaticsController;
 use App\Http\Controllers\StructController;
 use App\Http\Controllers\WelcomeController;
@@ -13,6 +14,10 @@ Route::prefix('/fak/')->name('fak.')->group(function () {
     Route::get('/', [FakController::class, 'index'])->name('index');
     Route::get('/staff', [FakController::class, 'staff'])->name('staff');
     Route::get('/ikn', [FakController::class, 'show'])->name('show');
+});
+
+Route::prefix('/kaf/')->name('kaf.')->group(function () {
+    Route::get('/', [KafController::class, 'index'])->name('index');
 });
 
 Route::controller(StaticsController::class)->group(function() {

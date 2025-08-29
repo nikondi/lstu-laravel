@@ -1,0 +1,11 @@
+.staff-slider {
+  &.swiper {
+    overflow: visible;
+  }
+  .employee-card {
+    height: 100%;
+  }
+  .swiper-slide {
+    height: auto;
+  }
+}
