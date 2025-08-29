@@ -141,20 +141,16 @@
                             <div class="employee-card__image"><img src="http://stu.lipetsk.ru/assets/struct/kaf/kaf-vm/staff/korobova_natalya_viktorovna.jpg" alt=""></div>
                             <div class="employee-card__position">Секретарь кафедры высшей математики</div>
                             <div class="employee-card__name">Коробова Наталья Викторовна</div>
-                            <div class="employee-popup popup">
-                                <div class="popup-background"></div>
-                                <div class="popup-content">
-                                    <div class="popup-close"></div>
-                                    <div class="employee-popup__head">
-                                        <div class="employee-popup__image"><img src="http://stu.lipetsk.ru/assets/struct/kaf/kaf-vm/staff/korobova_natalya_viktorovna.jpg" alt=""></div>
-                                        <div class="employee-popup__info">
-                                            <div class="employee-popup__position">Секретарь кафедры высшей математики</div>
-                                            <div class="employee-popup__name">Коробова Наталья Викторовна</div>
-                                        </div>
+                            <div class="employee-card__popup-content">
+                                <div class="employee-popup__head">
+                                    <div class="employee-popup__image"><img src="http://stu.lipetsk.ru/assets/struct/kaf/kaf-vm/staff/korobova_natalya_viktorovna.jpg" alt=""></div>
+                                    <div class="employee-popup__info">
+                                        <div class="employee-popup__position">Секретарь кафедры высшей математики</div>
+                                        <div class="employee-popup__name">Коробова Наталья Викторовна</div>
                                     </div>
-                                    <div class="employee-popup__description">
-                                        <p>В ЛГТУ работает в 1997 года, на кафедре высшей математики с 1998 года.</p>
-                                    </div>
+                                </div>
+                                <div class="employee-popup__description">
+                                    <p>В ЛГТУ работает в 1997 года, на кафедре высшей математики с 1998 года.</p>
                                 </div>
                             </div>
                             <div class="employee-card__button">
@@ -168,6 +164,21 @@
                             <div class="employee-card__position">профессор</div>
                             <div class="employee-card__name">Шмырин Анатолий Михайлович</div>
                             <div class="employee-card__academic">Доктор технических наук</div>
+                            <div class="employee-card__popup-content">
+                                <div class="employee-popup__head">
+                                    <div class="employee-popup__image"><img src="http://stu.lipetsk.ru/assets/struct/kaf/kaf-vm/staff/korobova_natalya_viktorovna.jpg" alt=""></div>
+                                    <div class="employee-popup__info">
+                                        <div class="employee-popup__position">Секретарь кафедры высшей математики</div>
+                                        <div class="employee-popup__name">Коробова Наталья Викторовна</div>
+                                    </div>
+                                </div>
+                                <div class="employee-popup__description">
+                                    <p>В Ахахахахаах шмырин</p>
+                                </div>
+                            </div>
+                            <div class="employee-card__button">
+                                <button>Подробнее <svg height="1em" width="1em"><use xlink:href="/assets/img/arrows.svg#right"></use></svg></button>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -313,4 +324,11 @@
             </div>
         </div>
     </section>
+    <div class="employee-popup popup" id="employee-popup">
+        <div class="popup-background"></div>
+        <div class="popup-content">
+            <button class="popup-close"></button>
+            <div id="employee-popup-content"></div>
+        </div>
+    </div>
 @endsection

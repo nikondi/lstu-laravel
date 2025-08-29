@@ -2,7 +2,7 @@ import {outsideClick} from "@/helpers";
 import {accordion} from "@/accordion";
 import Swiper from "swiper";
 import {Navigation} from "swiper/modules";
-import {openPopup} from "@/components/popup";
+import {initPopup, openPopup} from "@/components/popup";
 
 export default function fakPage() {
   initPartners();
@@ -16,13 +16,13 @@ export default function fakPage() {
 function initMenu() {
   const openMenu = (submenu: Element) => submenu.classList.add('opened');
   const closeMenu = (submenu: Element) => submenu.classList.remove('opened');
-  document.querySelectorAll('.fak-submenu').forEach(function(submenu) {
+  document.querySelectorAll('.fak-submenu').forEach(function (submenu) {
     const parent = submenu.parentNode;
     const button = parent.querySelector('button');
-    if(!button)
+    if (!button)
       return true;
-    button.addEventListener('click', function() {
-      if(submenu.classList.contains('opened'))
+    button.addEventListener('click', function () {
+      if (submenu.classList.contains('opened'))
         closeMenu(submenu);
       else
         openMenu(submenu);
@@ -32,11 +32,11 @@ function initMenu() {
 }
 
 function initDirections() {
-  document.querySelectorAll('.direction').forEach(function(direction) {
+  document.querySelectorAll('.direction').forEach(function (direction) {
     const button = direction.querySelector('.direction__heading') as HTMLElement;
     const content = direction.querySelector('.direction__content') as HTMLElement;
 
-    if(!button || !content)
+    if (!button || !content)
       return true;
 
     const _accordion = accordion(direction, button, content);
@@ -46,7 +46,7 @@ function initDirections() {
 
 function initPartners() {
   const elem = document.querySelector('.fak-partners-slider') as HTMLElement;
-  if(!elem)
+  if (!elem)
     return;
 
   new Swiper(elem, {
@@ -57,7 +57,7 @@ function initPartners() {
 
 function initGraduates() {
   const elem = document.querySelector('.fak-graduates-slider') as HTMLElement;
-  if(!elem)
+  if (!elem)
     return;
 
   const prev_button = elem.querySelector('.swiper-button-prev') as HTMLElement;
@@ -86,30 +86,45 @@ function initGraduates() {
 }
 
 function initStaff() {
-  document.querySelectorAll('.employee-card__button').forEach(function(button) {
-    const wrapper = button.closest('.employee-card');
-    const popup = wrapper.querySelector('.employee-popup');
-    if(!popup)
-      return true;
+  const popup = document.getElementById('employee-popup');
+  const popup_content_wrapper = document.getElementById('employee-popup-content');
+  if (popup) {
+    document.querySelectorAll('.employee-card__button').forEach(function (button) {
+      const wrapper = button.closest('.employee-card');
+      const popup_content = wrapper.querySelector('.employee-card__popup-content');
+      if (!popup_content)
+        return true;
 
-    button.addEventListener('click', function() {
-      openPopup(popup);
+      button.addEventListener('click', function () {
+        popup_content_wrapper.innerHTML = popup_content.innerHTML;
+        initPopup(popup);
+        openPopup(popup);
+      });
     });
-  });
+  }
 
   document.querySelectorAll('.staff-slider').forEach((container) => {
     new Swiper(container as HTMLElement, {
       slidesPerView: 1,
+      slidesPerGroup: 1,
       spaceBetween: 15,
+      modules: [Navigation],
+      navigation: {
+        prevEl: container.querySelector('.swiper-button-prev') as HTMLElement,
+        nextEl: container.querySelector('.swiper-button-next') as HTMLElement,
+      },
       breakpoints: {
         1200: {
-          slidesPerView: 4
+          slidesPerView: 4,
+          slidesPerGroup: 4,
         },
         768: {
-          slidesPerView: 3
+          slidesPerView: 3,
+          slidesPerGroup: 3,
         },
         576: {
-          slidesPerView: 2
+          slidesPerView: 2,
+          slidesPerGroup: 2,
         }
       }
     });

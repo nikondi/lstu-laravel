@@ -54,6 +54,18 @@ window.onbeforeunload = function () {
 };
 
 
+export function initPopup(popup: Element) {
+  const close = () => {
+    popup.classList.remove('active');
+    unlockBody();
+  };
+  popup.querySelectorAll('.popup-close, .popup-background').forEach(function(el) {
+    el.addEventListener('click', function () {
+      close();
+    });
+  })
+}
+
 export function openPopup(el: Element) {
   lockBody();
   el.classList.add('active');
@@ -61,14 +73,6 @@ export function openPopup(el: Element) {
 
 export function initPopups() {
   document.querySelectorAll('.popup').forEach((popup) => {
-    const close = () => {
-      popup.classList.remove('active');
-      unlockBody();
-    };
-    popup.querySelectorAll('.popup-close, .popup-background').forEach(function(el) {
-      el.addEventListener('click', function() {
-        close();
-      });
-    });
+    initPopup(popup);
   });
 }

@@ -64,6 +64,9 @@
       }
     }
   }
+  &__popup-content {
+    display: none;
+  }
 
   &__image img {
     width: 100%;
