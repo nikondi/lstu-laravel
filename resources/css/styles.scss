@@ -101,6 +101,7 @@ img {
 @import "pages/management";
 @import "pages/service";
 @import "pages/celevoe";
+@import "pages/abit-future";
 
 .heading-2 {
   font-size: 24px;
@@ -253,58 +254,68 @@ img {
     }
   }
 
-  &:hover .fak-title {
-    color: #ffffff;
+  svg {
+    color: var(--fak-color);
+    transition: .2s color;
   }
 
-  &--ikn:hover {
-    background-color: #FFD040;
+  &:hover {
+    background-color: var(--fak-color);
+    .fak-title,
+    svg {
+      color: #ffffff;
+    }
+  }
+}
+
+.fak-color {
+  &--ikn {
+    --fak-color: #FFD040;
   }
 
-  &--imt:hover {
-    background-color: #5f6db2;
+  &--imit {
+    --fak-color: #5F6DB2;
   }
 
-  &--mi:hover {
-    background-color: #6f7271;
+  &--mi {
+    --fak-color: #6f7271;
   }
 
-  &--isnep:hover {
-    background-color: #f18a00;
+  &--isnep {
+    --fak-color: #f18a00;
   }
 
-  &--isa:hover {
-    background-color: #e43d30;
+  &--isa {
+    --fak-color: #e43d30;
   }
 
-  &--fei:hover {
-    background-color: #8f4899;
+  &--fei {
+    --fak-color: #8f4899;
   }
 
-  &--zf:hover {
-    background-color: #007da5;
+  &--zf {
+    --fak-color: #007da5;
   }
 
-  &--fdo:hover {
-    background-color: #009ade;
+  &--fdo {
+    --fak-color: #009ade;
   }
 
-  &--uk:hover {
-    background-color: #00ac69;
+  &--uk {
+    --fak-color: #00ac69;
   }
 
-  &--nii:hover {
-    background-color: #00afaa;
+  &--nii {
+    --fak-color: #00afaa;
   }
 
-  &--lic:hover {
-    background-color: #30BEE5;
+  &--lic {
+    --fak-color: #30BEE5;
   }
 
-  &--vuc:hover {
-    background-color: #1a6b8b;
+  &--vuc {
+    --fak-color: #1a6b8b;
   }
-
 }
 
 .fak-logo {
@@ -706,9 +717,11 @@ img {
       background-color: rgba(0, 0, 0, 0.7);
     }
   }
+
   .swiper-button-next {
     right: 0;
   }
+
   .swiper-button-prev {
     left: 0;
   }
@@ -852,4 +865,10 @@ img {
       margin-bottom: 1.1em;
     }
   }
+}
+
+
+.default-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

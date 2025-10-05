@@ -11,6 +11,9 @@ import {initPopups} from "@/components/popup";
 import servicePage from "@/pages/service";
 import "swiper/css/bundle";
 import {gallery} from "@/components";
+import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import abitFuturePage from "@/pages/abit-future";
 
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.tabs').forEach(function(wrapper) {
@@ -57,6 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // components
   gallery();
+
+  initFancybox();
+
+  abitFuturePage();
 });
 
 
@@ -199,3 +206,6 @@ function initMenu() {
   })
 }
 
+function initFancybox() {
+  Fancybox.bind('[data-fancybox]');
+}

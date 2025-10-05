@@ -41,3 +41,4 @@ Route::get('/struct/dept', StructController::class);
 
 Route::get('/abit', [AbitController::class, 'index'])->name('abit');
 Route::get('/abit/czelevoe-obuchenie', [AbitController::class, 'celevoe'])->name('abit.celevoe');
+Route::get('/abit/future-students', [AbitController::class, 'future'])->name('abit.future');

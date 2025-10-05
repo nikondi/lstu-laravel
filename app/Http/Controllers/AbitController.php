@@ -13,4 +13,9 @@ class AbitController extends Controller
     {
         return view('abit.celevoe');
     }
+
+    public function future()
+    {
+        return view('abit.future');
+    }
 }

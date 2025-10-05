@@ -1,0 +1,85 @@
+.abit-future-booklets-wrapper {
+  display: flex;
+  margin: 0 -10px;
+}
+.abit-future-booklet-slider {
+  width: 50%;
+  padding: 10px;
+}
+.abit-future-booklet-slider .slider-pagination {
+  --swiper-pagination-color: #fff;
+}
+
+
+@media (max-width: 767px) {
+  .abit-future-booklets-wrapper {
+    flex-direction: column;
+  }
+  .abit-future-booklet-slider {
+    width: 100%;
+  }
+}
+
+
+.abit-future-tabs {
+  margin-top: 40px;
+}
+.abit-future-tabs-triggers {
+  display: flex;
+  overflow: auto;
+  border-bottom: 1px solid #999;
+}
+.abit-future-tabs-trigger {
+  display: flex;
+  align-items: center;
+  width: 135px;
+  justify-content: center;
+  column-gap: 8px;
+  padding: 7px 12px;
+  transition: {
+    property: background-color, color;
+    duration: .2s;
+  };
+
+  &:not(.active) {
+    cursor: pointer;
+  }
+
+  .fak-logo {
+    font-size: 12px;
+  }
+  svg {
+    color: var(--fak-color);
+    transition: .2s color;
+  }
+  &:hover,
+  &.active {
+    background-color: var(--fak-color);
+    color: #FFFFFF;
+    svg {
+      color: #FFFFFF;
+    }
+  }
+}
+.abit-future-tab {
+  &:not(.active) {
+    display: none;
+  }
+  h4 {
+    font-weight: 500;
+    font-size: 24px;
+    margin: 10px 0;
+  }
+}
+
+.abit-future-presentation {
+  max-width: unset;
+}
+
+@media (max-width: 767px) {
+  .abit-future-tab {
+    h4 {
+      font-size: 18px;
+    }
+  }
+}
