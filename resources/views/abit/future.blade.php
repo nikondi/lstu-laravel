@@ -71,8 +71,9 @@
         </div>
     </section>
 
-    <section>
+    <section class="default-section">
         <div class="container">
+            <h2 class="abit-future-title">Об институтах и колледже</h2>
             <div class="abit-future-tabs">
                 <div class="abit-future-tabs-triggers">
                     <div class="abit-future-tabs-trigger fak-color--ikn active">
@@ -133,7 +134,6 @@
                     </div>
                 </div>
                 <div class="abit-future-tab active">
-                    <h4>Об институте</h4>
                     <div class="abit-future-presentation gallery swiper">
                         <div class="swiper-wrapper">
                             @for($i = 1; $i <= 8; $i++)
@@ -158,7 +158,6 @@
                     </div>
                 </div>
                 <div class="abit-future-tab">
-                    <h4>Об институте</h4>
                     <div class="abit-future-presentation gallery swiper">
                         <div class="swiper-wrapper">
                             @for($i = 1; $i <= 11; $i++)
@@ -184,7 +183,6 @@
                     </div>
                 </div>
                 <div class="abit-future-tab">
-                    <h4>Об институте</h4>
                     <div class="abit-future-presentation gallery swiper">
                         <div class="swiper-wrapper">
                             @for($i = 1; $i <= 6; $i++)
@@ -209,7 +207,6 @@
                     </div>
                 </div>
                 <div class="abit-future-tab">
-                    <h4>Об институте</h4>
                     <div class="abit-future-presentation gallery swiper">
                         <div class="swiper-wrapper">
                             @for($i = 1; $i <= 9; $i++)
@@ -235,7 +232,6 @@
                     </div>
                 </div>
                 <div class="abit-future-tab">
-                    <h4>О колледже</h4>
                     <div class="abit-future-presentation gallery swiper">
                         <div class="swiper-wrapper">
                             @for($i = 1; $i <= 7; $i++)
@@ -261,7 +257,6 @@
                 </div>
 
                 <div class="abit-future-tab">
-                    <h4>Об институте</h4>
                     <div class="abit-future-presentation gallery swiper">
                         <div class="swiper-wrapper">
                             @for($i = 1; $i <= 9; $i++)
@@ -286,7 +281,6 @@
                     </div>
                 </div>
                 <div class="abit-future-tab">
-                    <h4>Об институте</h4>
                     <div class="abit-future-presentation gallery swiper">
                         <div class="swiper-wrapper">
                             @for($i = 1; $i <= 7; $i++)
@@ -309,6 +303,92 @@
                         </div>
                         <div class="swiper-pagination slider-pagination"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="default-section">
+        <div class="container">
+            <h2 class="abit-future-title">День открытых дверей</h2>
+            <div class="abit-future-tabs">
+                <div class="abit-future-tabs-triggers">
+                    <div class="abit-future-tabs-trigger fak-color--ikn active">
+                        <div class="fak-logo">
+                            <svg width="32" class="fak-logo__logo">
+                                <use xlink:href="/assets/img/faks-only-logo.svg#ikn"/>
+                            </svg>
+                        </div>
+                        <div class="abit-future-tabs-trigger__name">ИКН</div>
+                    </div>
+                    <div class="abit-future-tabs-trigger fak-color--imit">
+                        <div class="fak-logo">
+                            <svg width="32" class="fak-logo__logo">
+                                <use xlink:href="/assets/img/faks-only-logo.svg#imit"/>
+                            </svg>
+                        </div>
+                        <div class="abit-future-tabs-trigger__name">ИМиТ</div>
+                    </div>
+                    <div class="abit-future-tabs-trigger fak-color--isa">
+                        <div class="fak-logo">
+                            <svg width="32" class="fak-logo__logo">
+                                <use xlink:href="/assets/img/faks-only-logo.svg#isa"/>
+                            </svg>
+                        </div>
+                        <div class="abit-future-tabs-trigger__name">ИСА</div>
+                    </div>
+                    <div class="abit-future-tabs-trigger fak-color--isnep">
+                        <div class="fak-logo">
+                            <svg width="32" class="fak-logo__logo">
+                                <use xlink:href="/assets/img/faks-only-logo.svg#isnep"/>
+                            </svg>
+                        </div>
+                        <div class="abit-future-tabs-trigger__name">ИСНЭП</div>
+                    </div>
+                    <div class="abit-future-tabs-trigger fak-color--uk">
+                        <div class="fak-logo">
+                            <svg width="32" class="fak-logo__logo">
+                                <use xlink:href="/assets/img/faks-only-logo.svg#uk"/>
+                            </svg>
+                        </div>
+                        <div class="abit-future-tabs-trigger__name">УК</div>
+                    </div>
+                    <div class="abit-future-tabs-trigger fak-color--mi">
+                        <div class="fak-logo">
+                            <svg width="32" class="fak-logo__logo">
+                                <use xlink:href="/assets/img/faks-only-logo.svg#mi"/>
+                            </svg>
+                        </div>
+                        <div class="abit-future-tabs-trigger__name">МИ</div>
+                    </div>
+                    <div class="abit-future-tabs-trigger fak-color--fei">
+                        <div class="fak-logo">
+                            <svg width="32" class="fak-logo__logo">
+                                <use xlink:href="/assets/img/faks-only-logo.svg#fei"/>
+                            </svg>
+                        </div>
+                        <div class="abit-future-tabs-trigger__name">ФЭИ</div>
+                    </div>
+                </div>
+                <div class="abit-future-tab active">
+                    <iframe width="100%" height="405" src="https://rutube.ru/play/embed/e5b5f4a95fae30c05aae086ffee54909/" style="border: none;" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                </div>
+                <div class="abit-future-tab">
+                    2
+                </div>
+                <div class="abit-future-tab">
+                    3
+                </div>
+                <div class="abit-future-tab">
+                    4
+                </div>
+                <div class="abit-future-tab">
+                    5
+                </div>
+                <div class="abit-future-tab">
+                    6
+                </div>
+                <div class="abit-future-tab">
+                    7
                 </div>
             </div>
         </div>

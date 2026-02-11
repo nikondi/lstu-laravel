@@ -20,9 +20,13 @@
   }
 }
 
+.abit-future-title {
+  font-size: 32px;
+  font-weight: 500;
+}
 
 .abit-future-tabs {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .abit-future-tabs-triggers {
   display: flex;
@@ -69,6 +73,10 @@
     font-weight: 500;
     font-size: 24px;
     margin: 10px 0;
+  }
+  iframe {
+    width: 100%;
+    height: 800px;
   }
 }
 
