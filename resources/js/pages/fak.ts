@@ -103,15 +103,15 @@ function initStaff() {
     });
   }
 
-  document.querySelectorAll('.staff-slider').forEach((container) => {
-    new Swiper(container as HTMLElement, {
+  document.querySelectorAll<HTMLElement>('.staff-slider').forEach((container) => {
+    new Swiper(container, {
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 15,
       modules: [Navigation],
       navigation: {
-        prevEl: container.querySelector('.swiper-button-prev') as HTMLElement,
-        nextEl: container.querySelector('.swiper-button-next') as HTMLElement,
+        prevEl: container.querySelector<HTMLElement>('.swiper-button-prev'),
+        nextEl: container.querySelector<HTMLElement>('.swiper-button-next'),
       },
       breakpoints: {
         1200: {

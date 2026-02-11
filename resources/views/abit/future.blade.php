@@ -9,6 +9,57 @@
         'title' => 'Будущему студенту'
     ])
 
+    <section class="default-section" style="margin-top: 0">
+        <div class="container formatted-text">
+            <ul>
+                <li><a href="abit/future-students/inzhenernaya-olimpiada-shkolnikov-czentra-rossii/">Инженерная Олимпиада школьников Центра России</a>
+                </li></ul>
+        </div>
+    </section>
+
+    <section class="abit-future-dates slider-wrapper">
+        <div class="container">
+            <div class="swiper abit-future-dates-slider">
+                <div class="slider-heading">
+                    <h2 class="heading-2">Сроки поступления на бакалавриат, специалитет и базовое высшее</h2>
+                    <div class="slider-heading__buttons">
+                        <div
+                            class="slider-heading__button swiper-button-prev swiper-button-disabled swiper-button-lock">
+                            <svg width="1em" height="1em">
+                                <use xlink:href="/assets/img/arrows.svg#left"></use>
+                            </svg>
+                        </div>
+                        <div
+                            class="slider-heading__button swiper-button-next swiper-button-disabled swiper-button-lock">
+                            <svg width="1em" height="1em">
+                                <use xlink:href="/assets/img/arrows.svg#right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-wrapper">
+                    @foreach($dates as $date)
+                        <div class="swiper-slide">
+                            <div class="abit-future-date">
+                                <div class="abit-future-date__heading">
+                                    <div class="abit-future-date__date">
+                                        <div class="abit-future-date__day">{{ $date['day'] }}</div>
+                                        <div class="abit-future-date__month">{{ $date['month'] }}</div>
+                                    </div>
+                                    <div class="abit-future-date__time">{{ $date['time'] }}</div>
+                                </div>
+                                <div class="abit-future-date__text">{{ $date['title'] }}</div>
+                                @if(!empty($date['description']))
+                                    <div class="abit-future-date__description">{{ $date['description'] }}</div>
+                                @endif
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <section class="abit-future-booklets slider-wrapper">
         <div class="container">
@@ -370,7 +421,10 @@
                     </div>
                 </div>
                 <div class="abit-future-tab active">
-                    <iframe width="100%" height="405" src="https://rutube.ru/play/embed/e5b5f4a95fae30c05aae086ffee54909/" style="border: none;" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                    <iframe width="100%" height="405"
+                            src="https://rutube.ru/play/embed/e5b5f4a95fae30c05aae086ffee54909/" style="border: none;"
+                            allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen
+                            allowFullScreen></iframe>
                 </div>
                 <div class="abit-future-tab">
                     2

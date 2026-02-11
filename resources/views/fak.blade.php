@@ -317,12 +317,12 @@
                     <div class="slider-heading__buttons">
                         <div class="slider-heading__button swiper-button-prev">
                             <svg width="1em" height="1em">
-                                <use xlink:href="http://localhost/assets/img/arrows.svg#left"></use>
+                                <use xlink:href="/assets/img/arrows.svg#left"></use>
                             </svg>
                         </div>
                         <div class="slider-heading__button swiper-button-next">
                             <svg width="1em" height="1em">
-                                <use xlink:href="http://localhost/assets/img/arrows.svg#right"></use>
+                                <use xlink:href="/assets/img/arrows.svg#right"></use>
                             </svg>
                         </div>
                     </div>
@@ -397,18 +397,18 @@
                     <div class="slider-heading__buttons">
                         <div class="slider-heading__button swiper-button-prev">
                             <svg width="1em" height="1em">
-                                <use xlink:href="http://localhost/assets/img/arrows.svg#left"></use>
+                                <use xlink:href="/assets/img/arrows.svg#left"></use>
                             </svg>
                         </div>
                         <div class="slider-heading__button swiper-button-next">
                             <svg width="1em" height="1em">
-                                <use xlink:href="http://localhost/assets/img/arrows.svg#right"></use>
+                                <use xlink:href="/assets/img/arrows.svg#right"></use>
                             </svg>
                         </div>
                         <button class="slider-heading__button slider-heading__button--dark">
                             Все новости
                             <svg width="1em" height="1em">
-                                <use xlink:href="http://localhost/assets/img/arrows.svg#right"></use>
+                                <use xlink:href="/assets/img/arrows.svg#right"></use>
                             </svg>
                         </button>
                     </div>

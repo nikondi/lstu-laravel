@@ -1,5 +1,9 @@
+import Swiper from "swiper";
+import {Navigation} from "swiper/modules";
+
 export default function abitFuturePage() {
   initTabs();
+  initDates();
 }
 
 function initTabs() {
@@ -32,4 +36,31 @@ function initTabs() {
       });
     });
   });
+}
+
+function initDates() {
+  const sliderEl = document.querySelector<HTMLElement>('.abit-future-dates-slider');
+  if (!sliderEl)
+    return;
+
+  new Swiper(sliderEl, {
+    modules: [Navigation],
+    spaceBetween: 16,
+    slidesPerView: 1,
+    navigation: {
+      prevEl: sliderEl.querySelector<HTMLElement>('.swiper-button-prev'),
+      nextEl: sliderEl.querySelector<HTMLElement>('.swiper-button-next'),
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1100: {
+        slidesPerView: 5
+      }
+    }
+  })
 }

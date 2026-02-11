@@ -872,3 +872,49 @@ img {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+
+.abit-future-dates-slider.swiper {
+  overflow: visible;
+  .swiper-slide {
+    height: auto;
+    .abit-future-date {
+      height: 100%;
+    }
+  }
+}
+
+.abit-future-date {
+  background-color: #edf2fe;
+  padding: 24px;
+  border-radius: 12px;
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+  }
+  &__date {
+    display: flex;
+    column-gap: 10px;
+    align-items: flex-start;
+  }
+  &__day {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  &__month,
+  &__time {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  &__text {
+    min-height: 48px;
+    margin-top: 12px;
+  }
+  &__description {
+    font-weight: 600;
+    border-top: 1px solid #E1E1E1;
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+}
