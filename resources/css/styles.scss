@@ -214,6 +214,7 @@ img {
     .fak-link {
       height: 100%;
       min-width: 250px;
+      max-width: 350px;
     }
   }
 }
@@ -315,6 +316,10 @@ img {
 
   &--vuc {
     --fak-color: #1a6b8b;
+  }
+
+  &--ai {
+    --fak-color: #2dab66;
   }
 }
 
