@@ -2,7 +2,7 @@ import {outsideClick} from "@/helpers";
 import {accordion} from "@/accordion";
 import Swiper from "swiper";
 import {Navigation} from "swiper/modules";
-import {initPopup, openPopup} from "@/components/popup";
+import {openPopup} from "@/components/popup";
 
 export default function fakPage() {
   initPartners();
@@ -85,26 +85,42 @@ function initGraduates() {
   });
 }
 
+interface IEmployee {
+  image: string
+  position: string
+  name: string
+  description: string
+}
+
 function initStaff() {
   const popup = document.getElementById('employee-popup');
   const popup_content_wrapper = document.getElementById('employee-popup-content');
   if (popup) {
-    document.querySelectorAll('.employee-card__button').forEach(function (button) {
-      const wrapper = button.closest('.employee-card');
-      const popup_content = wrapper.querySelector('.employee-card__popup-content');
-      if (!popup_content)
-        return true;
-
+    document.querySelectorAll<HTMLButtonElement>('.employee-card__button').forEach(function (button) {
       button.addEventListener('click', function () {
-        popup_content_wrapper.innerHTML = popup_content.innerHTML;
-        initPopup(popup);
+        const employee = JSON.parse(button.dataset.employee) as IEmployee;
+        if (!employee)
+          return;
+
+        const image_html = employee.image.trim() ? `<div class="employee-popup__image"><img src="${employee.image.trim()}" alt=""></div>` : '';
+        const html = `<div class="employee-popup__head">
+                    ${image_html}
+                    <div class="employee-popup__info">
+                        <div class="employee-popup__position">${employee.position}</div>
+                        <div class="employee-popup__name">${employee.name}</div>
+                    </div>
+                </div>
+                <div class="employee-popup__description">${employee.description}</div>`;
+
+
+        popup_content_wrapper.innerHTML = html;
         openPopup(popup);
       });
     });
   }
 
   document.querySelectorAll<HTMLElement>('.staff-slider').forEach((container) => {
-    new Swiper(container, {
+    new Swiper(container.querySelector<HTMLElement>('.swiper'), {
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 15,
@@ -114,7 +130,15 @@ function initStaff() {
         nextEl: container.querySelector<HTMLElement>('.swiper-button-next'),
       },
       breakpoints: {
-        1200: {
+        1401: {
+          slidesPerView: 6,
+          slidesPerGroup: 6,
+        },
+        1201: {
+          slidesPerView: 5,
+          slidesPerGroup: 5,
+        },
+        992: {
           slidesPerView: 4,
           slidesPerGroup: 4,
         },

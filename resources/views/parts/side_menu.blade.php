@@ -208,7 +208,7 @@
         <div class="side_menu__mobile">
             <button class="sidebar_button sidebar_button--language">EN</button>
             <a href="https://mb.stu.lipetsk.ru/" class="sidebar_button" target="_blank"><svg width="26" height="26"><use xlink:href="/assets/img/icons.svg#envelope" /></svg></a>
-            <button class="sidebar_button"><svg width="32" height="32"><use xlink:href="/assets/img/icons.svg#eye" /></svg></button>
+            <button class="sidebar_button specialButton"><svg width="32" height="32"><use xlink:href="/assets/img/icons.svg#eye" /></svg></button>
         </div>
     </div>
 </div>

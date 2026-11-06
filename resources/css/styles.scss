@@ -8,12 +8,12 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #FBFBFB;
+  background-color: #f2f6fb;
   color: #333333;
   font-size: 16px;
 
   &.ohidden {
-    overflow-y: scroll;
+    overflow-y: hidden;
     position: fixed !important;
     width: 100%;
   }
@@ -33,6 +33,7 @@ img {
   padding: 0 $container-padding;
   max-width: 1820px;
   margin: 0 auto;
+  width: 100%;
   @media (max-width: 1000px) {
     padding: 0 20px;
   }
@@ -95,7 +96,6 @@ img {
 @import "pages/main";
 @import "pages/abit";
 @import "pages/fak";
-@import "pages/kaf";
 @import "pages/news-single";
 @import "pages/news";
 @import "pages/management";
@@ -128,8 +128,7 @@ img {
 }
 
 
-.page-content {
-  width: 100%;
+.wrapper {
   padding-left: 70px;
   @media (max-width: 767px) {
     padding-left: 0;
@@ -145,6 +144,7 @@ img {
   padding: 35px 30px;
   display: flex;
   flex-direction: column;
+  color: #fff;
 
   .btn--outlined {
     color: #ffffff;
@@ -170,7 +170,8 @@ img {
 
   &__buttons {
     display: flex;
-    column-gap: 15px;
+    column-gap: 20px;
+    margin-top: 20px;
   }
 
   &__btn_about {
@@ -262,6 +263,7 @@ img {
 
   &:hover {
     background-color: var(--fak-color);
+
     .fak-title,
     svg {
       color: #ffffff;
@@ -584,50 +586,44 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   z-index: 1010;
   visibility: hidden;
-  transition: var(--anim-duration, .5s) visibility;
+  transition: var(--anim-duration, .5s) visibility, var(--anim-duration, .5s) background-color, .1s padding-bottom;
+  backdrop-filter: blur(8px);
+  background-color: rgba(#132D55, .0);
+  padding: 20px;
 
   --anim-duration: .3s;
 
   &.active {
     visibility: visible;
+    background-color: rgba(#132D55, .5);
   }
 
   &.active &-form {
-    bottom: 50px;
+    transform: translate3d(0, 0, 0);
   }
 
-  &.active &-background {
-    opacity: 1;
-  }
-
-  &-background {
-    backdrop-filter: blur(8px);
-    background-color: rgba(#132D55, .5);
-    transition: var(--anim-duration, .5s) opacity;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
 
   &-form {
-    position: absolute;
-    left: 50%;
-    bottom: -55px;
     -webkit-box-shadow: 0 5px 14px 0 rgba(0, 0, 0, .65);
     -moz-box-shadow: 0 5px 14px 0 rgba(0, 0, 0, .65);
     box-shadow: 0 5px 14px 0 rgba(0, 0, 0, .65);
-    transform: translate3d(-50%, 0, 0);
+    width: 100%;
+    transform: translate3d(0, calc(100% + 20px), 0);
     background-color: #FFFFFF;
-    width: calc(100% - 40px);
     max-width: 800px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     padding: 2px;
     border-radius: 6px;
-    transition: var(--anim-duration, .5s) bottom cubic-bezier(0.25, 1, 0.5, 1),;
-    will-change: bottom;
+    transition: var(--anim-duration, .5s) transform cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
 
     label {
       flex: 1;
@@ -881,8 +877,10 @@ img {
 
 .abit-future-dates-slider.swiper {
   overflow: visible;
+
   .swiper-slide {
     height: auto;
+
     .abit-future-date {
       height: 100%;
     }
@@ -893,33 +891,59 @@ img {
   background-color: #edf2fe;
   padding: 24px;
   border-radius: 12px;
+
   &__heading {
     display: flex;
     justify-content: space-between;
     font-weight: 500;
   }
+
   &__date {
     display: flex;
     column-gap: 10px;
     align-items: flex-start;
   }
+
   &__day {
     font-size: 32px;
     line-height: 40px;
   }
+
   &__month,
   &__time {
     font-size: 16px;
     line-height: 26px;
   }
+
   &__text {
     min-height: 48px;
     margin-top: 12px;
   }
+
   &__description {
     font-weight: 600;
     border-top: 1px solid #E1E1E1;
     padding-top: 12px;
     margin-top: 12px;
   }
+}
+
+.history-banner__bot {
+  border: 1px solid #FF8300;
+  border-radius: 4px;
+  margin-top: 15px;
+  padding: 12px 12px 12px 50px;
+  position: relative
+}
+
+.history-banner__bot a {
+  color: inherit
+}
+
+.history-banner__bot > svg {
+  position: absolute;
+  left: 11px;
+  font-size: 28px;
+  top: 50%;
+  transform: translateY(-50%)
 }

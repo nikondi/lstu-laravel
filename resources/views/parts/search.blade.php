@@ -1,5 +1,4 @@
 <div class="search">
-    <div class="search-background search-close"></div>
     <form method="get" action="" class="search-form">
         <label>
             <input type="text" name="search" placeholder="Поиск..." />

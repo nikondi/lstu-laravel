@@ -1,26 +1,31 @@
 .icon-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 10px;
-    .icon-button:not(:last-child) {
-        margin-right: 10px;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+
+  .icon-button:not(:last-child) {
+    margin-right: 10px;
+  }
 }
+
 .icon-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 8px;
-    border: 1px solid #FF8300;
-    border-radius: 2px;
-    text-decoration: none;
-    color: #444444;
-    transition-property: background-color, color;
-    transition-duration: .2s;
-    &:hover {
-        background-color: #FF8300;
-        color: #ffffff;
-    }
-    svg {
-        margin-right: 5px;
-    }
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 8px;
+  border: 1px solid #FF8300;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #444444;
+  transition-property: background-color, color;
+  transition-duration: .2s;
+  background-color: #fff;
+
+  &:hover {
+    background-color: #FF8300;
+    color: #ffffff;
+  }
+
+  svg {
+    margin-right: 5px;
+  }
 }

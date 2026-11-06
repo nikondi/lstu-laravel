@@ -1,5 +1,5 @@
 .main_promo {
-  height: 100vh;
+  height: 70dvh;
   min-height: 600px;
   position: relative;
 
@@ -14,9 +14,11 @@
 
     img,
     video {
-      width: 100%;
-      height: 100%;
+      width: 120%;
+      height: calc(100% + 200px);
       object-fit: cover;
+      position: absolute;
+      top: -100px;
     }
 
     &:after {

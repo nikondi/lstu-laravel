@@ -7,25 +7,26 @@ import {initAccordions} from "@/accordion";
 import fakPage from "@/pages/fak";
 import mainPage from "@/pages/main";
 import initNewsSliders from "@/components/news-slider";
-import {initPopups} from "@/components/popup";
+import {initPopups, lockBody, unlockBody} from "@/components/popup";
 import servicePage from "@/pages/service";
 import "swiper/css/bundle";
 import {gallery} from "@/components";
-import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
+import {Fancybox} from "@fancyapps/ui/dist/fancybox/";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import abitFuturePage from "@/pages/abit-future";
+import {KeyboardAvoidingView} from "@/libs/KeyboardAvoidingView";
 
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.tabs').forEach(function(wrapper) {
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.tabs').forEach(function (wrapper) {
     const triggers = wrapper.querySelectorAll('.tabs-header > div');
     const content = wrapper.querySelectorAll('.tabs-contents > div');
 
-    triggers.forEach(function(trigger, i) {
-      trigger.addEventListener('click', function() {
-        content.forEach(function(inner) {
+    triggers.forEach(function (trigger, i) {
+      trigger.addEventListener('click', function () {
+        content.forEach(function (inner) {
           inner.classList.remove('active')
         })
-        triggers.forEach(function(tr) {
+        triggers.forEach(function (tr) {
           tr.classList.remove('active')
         })
         content[i].classList.add('active');
@@ -66,90 +67,46 @@ document.addEventListener('DOMContentLoaded', function() {
   abitFuturePage();
 });
 
-
-function getScrollbarWidth() {
-
-  // Creating invisible container
-  const outer = document.createElement('div');
-  outer.style.visibility = 'hidden';
-  outer.style.overflow = 'scroll'; // forcing scrollbar to appear
-  // @ts-ignore
-  outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
-  document.body.appendChild(outer);
-
-  // Creating inner element and placing it in the container
-  const inner = document.createElement('div');
-  outer.appendChild(inner);
-
-  // Calculating difference between container's full width and the child width
-  const scrollbarWidth = (outer.offsetWidth-inner.offsetWidth);
-
-  // Removing temporary elements from the DOM
-  outer.parentNode.removeChild(outer);
-
-  return scrollbarWidth;
-
-}
-
-const scrollbar_width = getScrollbarWidth();
-
-let body_scrollTop = 0;
-let is_locked_body = false;
-
-function lockBody() {
-  if(is_locked_body)
-    return;
-
-  document.body.style.marginRight = scrollbar_width+'px';
-  body_scrollTop = document.documentElement.scrollTop;
-  document.body.style.top = -(body_scrollTop)+'px';
-  document.body.classList.add('ohidden');
-
-  is_locked_body = true;
-}
-
-function unlockBody() {
-  if(!is_locked_body)
-    return;
-
-  document.body.classList.remove('ohidden');
-  document.documentElement.scrollTo(0, body_scrollTop);
-
-  document.body.style.top = null;
-  document.body.style.marginRight = null;
-  is_locked_body = false;
-}
-
-window.onbeforeunload = function() {
-  unlockBody();
-};
-
 function initSearch() {
-  const search_wrapper = document.querySelector('.search');
+  const search_wrapper = document.querySelector<HTMLElement>('.search');
+
+  if (!search_wrapper)
+    return;
+
+  const search_form = search_wrapper.querySelector<HTMLElement>('.search-form');
+
+  function onKeyUp(e: KeyboardEvent) {
+    if (e.key === 'Escape')
+      closeSearch();
+  }
+
+  let kbHandler: KeyboardAvoidingView = null;
 
   function openSearch() {
     lockBody();
+    kbHandler = new KeyboardAvoidingView(search_wrapper);
+    document.addEventListener('keyup', onKeyUp);
+
     search_wrapper.classList.add('active');
-    setTimeout(function() {
-      (search_wrapper.querySelector('.search-form input') as HTMLInputElement).focus();
+    setTimeout(function () {
+      search_wrapper.querySelector<HTMLInputElement>('.search-form input').focus();
     }, 200);
   }
 
   function closeSearch() {
     unlockBody();
+    kbHandler.destroy();
+    document.removeEventListener('keyup', onKeyUp);
     search_wrapper.classList.remove('active');
   }
 
-  document.addEventListener('keyup', function(e) {
-    if(e.key === 'Escape')
-      closeSearch();
-  });
-  document.querySelectorAll('.search-open').forEach(function(trigger) {
+  document.querySelectorAll('.search-open').forEach(function (trigger) {
     trigger.addEventListener('click', openSearch);
   });
-  document.querySelectorAll('.search-close').forEach(function(trigger) {
-    trigger.addEventListener('click', closeSearch);
-  });
+
+  search_wrapper.addEventListener('click', closeSearch);
+  search_form.addEventListener('click', (e) => e.stopPropagation());
+
 }
 
 function initMenu() {
@@ -163,44 +120,44 @@ function initMenu() {
 
   function closeSideMenu() {
     side_menu.classList.remove('active')
-    side_menu.querySelectorAll('.side_menu__sub-open.active').forEach(function(b) {
+    side_menu.querySelectorAll('.side_menu__sub-open.active').forEach(function (b) {
       b.classList.remove('active');
     });
     unlockBody();
   }
 
-  document.addEventListener('keyup', function(e) {
-    if(e.key === 'Escape')
+  document.addEventListener('keyup', function (e) {
+    if (e.key === 'Escape')
       closeSideMenu();
   })
-  document.querySelector('.side_menu_burger').addEventListener('click', function() {
-    if(side_menu.classList.contains('active'))
+  document.querySelector('.side_menu_burger').addEventListener('click', function () {
+    if (side_menu.classList.contains('active'))
       closeSideMenu();
     else
       openSideMenu();
   });
-  document.querySelectorAll('.side_menu_close').forEach(function(close) {
+  document.querySelectorAll('.side_menu_close').forEach(function (close) {
     close.addEventListener('click', closeSideMenu);
   });
 
 
   const open_buttons = side_menu.querySelectorAll('.side_menu__sub-open');
   const close_buttons = side_menu.querySelectorAll('.side_menu__sub-close');
-  open_buttons.forEach(function(button) {
-    button.addEventListener('click', function() {
+  open_buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
       button.classList.add('active');
     });
   })
-  close_buttons.forEach(function(button) {
-    button.addEventListener('click', function() {
+  close_buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
       button.closest('.has-submenu').querySelector('.side_menu__sub-open').classList.remove('active');
     });
   })
-  side_menu.querySelectorAll('.side_menu__submenu').forEach(function(submenu) {
-    submenu.addEventListener('click', function() {
+  side_menu.querySelectorAll('.side_menu__submenu').forEach(function (submenu) {
+    submenu.addEventListener('click', function () {
       submenu.closest('.has-submenu').querySelector('.side_menu__sub-open').classList.remove('active');
     });
-    submenu.querySelector('ul').addEventListener('click', function(e) {
+    submenu.querySelector('ul').addEventListener('click', function (e) {
       e.stopPropagation();
     })
   })

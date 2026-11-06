@@ -26,7 +26,7 @@
     </div>
     <div class="sidebar_part">
         <div class="sidebar_tooltip__wrapper">
-            <button class="sidebar_button"><svg width="32" height="32"><use xlink:href="/assets/img/icons.svg#eye" /></svg></button>
+            <button class="sidebar_button specialButton"><svg width="32" height="32"><use xlink:href="/assets/img/icons.svg#eye" /></svg></button>
             <div class="sidebar_tooltip">Версия для слабовидящих</div>
         </div>
         <button class="sidebar_button sidebar_button--language">EN</button>
