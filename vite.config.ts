@@ -1,5 +1,6 @@
 import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
+import {resolve} from "path";
 
 export default defineConfig({
   server: {
@@ -24,11 +25,9 @@ export default defineConfig({
       refresh: true,
     }),
   ],
-  build: {
-    resolve: {
-      alias: {
-        '@': '/resources/js',
-      }
-    },
-  }
+  resolve: {
+    alias: {
+      'ziggy-js': resolve('./vendor/tightenco/ziggy')
+    }
+  },
 });

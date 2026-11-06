@@ -65,7 +65,7 @@
                                     <use xlink:href="/assets/img/faks-only-logo.svg#imit"/>
                                 </svg>
                             </div>
-                            <div class="fak-title">Институт<br />машиностроения и<br />транспорта</div>
+                            <div class="fak-title">Институт<br/>машиностроения и<br/>транспорта</div>
                         </a>
                     </div>
                     <div class="swiper-slide">
@@ -85,7 +85,7 @@
                                     <use xlink:href="/assets/img/faks-only-logo.svg#isnep"/>
                                 </svg>
                             </div>
-                            <div class="fak-title">Институт<br/>социальных наук,<br />экономики и права</div>
+                            <div class="fak-title">Институт<br/>социальных наук,<br/>экономики и права</div>
                         </a>
                     </div>
                     <div class="swiper-slide">
@@ -95,7 +95,7 @@
                                     <use xlink:href="/assets/img/faks-only-logo.svg#isa"/>
                                 </svg>
                             </div>
-                            <div class="fak-title">Институт<br/>строительства и<br />архитектуры</div>
+                            <div class="fak-title">Институт<br/>строительства и<br/>архитектуры</div>
                         </a>
                     </div>
                     <div class="swiper-slide">
@@ -105,7 +105,7 @@
                                     <use xlink:href="/assets/img/faks-only-logo.svg#fei"/>
                                 </svg>
                             </div>
-                            <div class="fak-title">Физико-<br/>энергетический<br />институт</div>
+                            <div class="fak-title">Физико-<br/>энергетический<br/>институт</div>
                         </a>
                     </div>
                     <div class="swiper-slide">
@@ -115,7 +115,7 @@
                                     <use xlink:href="/assets/img/faks-only-logo.svg#ikn"/>
                                 </svg>
                             </div>
-                            <div class="fak-title">Институт<br/>компьютерных<br />наук</div>
+                            <div class="fak-title">Институт<br/>компьютерных<br/>наук</div>
                         </a>
                     </div>
                     <div class="swiper-slide">
@@ -145,7 +145,7 @@
                                     <use xlink:href="/assets/img/faks-only-logo.svg#fdo"/>
                                 </svg>
                             </div>
-                            <div class="fak-title">Факультет<br/>дополнительного<br />образования</div>
+                            <div class="fak-title">Факультет<br/>дополнительного<br/>образования</div>
                         </a>
                     </div>
                     <div class="swiper-slide">
@@ -165,7 +165,7 @@
                                     <use xlink:href="/assets/img/faks-only-logo.svg#nii"/>
                                 </svg>
                             </div>
-                            <div class="fak-title">Научно-<br/>исследовательский<br />институт</div>
+                            <div class="fak-title">Научно-<br/>исследовательский<br/>институт</div>
                         </a>
                     </div>
                     <div class="swiper-slide">
@@ -175,7 +175,7 @@
                                     <use xlink:href="/assets/img/faks-only-logo.svg#lic"/>
                                 </svg>
                             </div>
-                            <div class="fak-title">Региональный<br/>технический<br />лицей</div>
+                            <div class="fak-title">Региональный<br/>технический<br/>лицей</div>
                         </a>
                     </div>
                     <div class="swiper-slide">
@@ -185,7 +185,7 @@
                                     <use xlink:href="/assets/img/faks-only-logo.svg#vuc"/>
                                 </svg>
                             </div>
-                            <div class="fak-title">Военный<br/>учебный<br />центр</div>
+                            <div class="fak-title">Военный<br/>учебный<br/>центр</div>
                         </a>
                     </div>
                 </div>
