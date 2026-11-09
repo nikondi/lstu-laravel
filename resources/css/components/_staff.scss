@@ -18,15 +18,44 @@
 
 
 .staff-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   margin: 0 -10px;
+  gap: 20px;
 }
 
-.staff-item {
-  width: 25%;
-  padding: 10px;
+@media(min-width: 576px) {
+  .staff-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
+@media(min-width: 768px) {
+  .staff-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(min-width: 992px) {
+  .staff-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media(min-width: 1201px) {
+  .staff-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media(min-width: 1401px) {
+  .staff-list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+
+.staff-item {
   .employee-card {
     height: 100%;
   }

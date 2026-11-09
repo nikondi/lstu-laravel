@@ -159,13 +159,18 @@
                                 ];
                                 ?>
                                 <div class="employee-card__image">
-                                    <button class="employee-card__button"
-                                            data-employee="<?= htmlspecialchars(json_encode($employee)) ?>">
-                                        Подробнее
-                                        <svg height="1em" width="1em">
-                                            <use xlink:href="/assets/img/arrows.svg#right"></use>
-                                        </svg>
-                                    </button>
+                                    @if($employee['image'])
+                                        <img src="{{ $employee['image'] }}" alt="">
+                                    @endif
+                                    @if($employee['description'])
+                                        <button class="employee-card__button"
+                                                data-employee="<?= htmlspecialchars(json_encode($employee)) ?>">
+                                            Подробнее
+                                            <svg height="1em" width="1em">
+                                                <use xlink:href="/assets/img/arrows.svg#right"></use>
+                                            </svg>
+                                        </button>
+                                    @endif
                                 </div>
                                 <div class="employee-card__position">профессор</div>
                                 <div class="employee-card__name">Шмырин Анатолий Михайлович</div>
