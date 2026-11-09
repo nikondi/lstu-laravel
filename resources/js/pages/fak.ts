@@ -103,7 +103,7 @@ function initStaff() {
           return;
 
         const image_html = employee.image.trim() ? `<div class="employee-popup__image"><img src="${employee.image.trim()}" alt=""></div>` : '';
-        const html = `<div class="employee-popup__head">
+        popup_content_wrapper.innerHTML = `<div class="employee-popup__head">
                     ${image_html}
                     <div class="employee-popup__info">
                         <div class="employee-popup__position">${employee.position}</div>
@@ -111,9 +111,6 @@ function initStaff() {
                     </div>
                 </div>
                 <div class="employee-popup__description">${employee.description}</div>`;
-
-
-        popup_content_wrapper.innerHTML = html;
         openPopup(popup);
       });
     });

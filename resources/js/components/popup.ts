@@ -60,20 +60,22 @@ export function initPopup(popup: HTMLElement) {
   if (popup.classList.contains('inited'))
     return;
 
-  const close = () => {
-    popup.classList.remove('active');
-    unlockBody();
-  };
-  popup.querySelectorAll('.popup-close, .popup-background').forEach(function (el) {
+  // TODO close on escape
+  popup.querySelectorAll<HTMLElement>('.popup-close, .popup-background').forEach(function (el) {
     el.addEventListener('click', function () {
-      close();
+      closePopup(el);
     });
   })
 
   popup.classList.add('inited');
 }
 
-export function openPopup(el: Element) {
+export function closePopup(el: HTMLElement) {
+  unlockBody();
+  el.classList.remove('active');
+}
+
+export function openPopup(el: HTMLElement) {
   lockBody();
   el.classList.add('active');
 }
