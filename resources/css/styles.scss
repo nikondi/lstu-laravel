@@ -1,4 +1,5 @@
-@import "variables";
+@use "sass:meta";
+@use "variables";
 
 * {
   margin: 0;
@@ -30,7 +31,7 @@ img {
 
 
 .container {
-  padding: 0 $container-padding;
+  padding: 0 variables.$container-padding;
   max-width: 1820px;
   margin: 0 auto;
   width: 100%;
@@ -67,41 +68,41 @@ img {
 }
 
 
-@import "parts/sidebar";
-@import "parts/footer";
-@import "parts/side_menu";
-@import "parts/mobile-header";
-@import "parts/header";
-@import "parts/page-title";
-@import "parts/breadcrumbs";
+@include meta.load-css("parts/sidebar");
+@include meta.load-css("parts/footer");
+@include meta.load-css("parts/side_menu");
+@include meta.load-css("parts/mobile-header");
+@include meta.load-css("parts/header");
+@include meta.load-css("parts/page-title");
+@include meta.load-css("parts/breadcrumbs");
 
-@import "components/button";
-@import "components/icon-button";
-@import "components/socials";
-@import "components/news";
-@import "components/dean";
-@import "components/file";
-@import "components/directions";
-@import "components/useful-links";
-@import "components/pagination";
-@import "components/accordion";
-@import "components/sliders";
-@import "components/news-slider";
-@import "components/staff";
-@import "components/popup";
-@import "components/contacts-list";
-@import "components/formatted-text";
-@import "components/gallery";
+@include meta.load-css("components/button");
+@include meta.load-css("components/icon-button");
+@include meta.load-css("components/socials");
+@include meta.load-css("components/news");
+@include meta.load-css("components/dean");
+@include meta.load-css("components/file");
+@include meta.load-css("components/directions");
+@include meta.load-css("components/useful-links");
+@include meta.load-css("components/pagination");
+@include meta.load-css("components/accordion");
+@include meta.load-css("components/sliders");
+@include meta.load-css("components/news-slider");
+@include meta.load-css("components/staff");
+@include meta.load-css("components/popup");
+@include meta.load-css("components/contacts-list");
+@include meta.load-css("components/formatted-text");
+@include meta.load-css("components/gallery");
 
-@import "pages/main";
-@import "pages/abit";
-@import "pages/fak";
-@import "pages/news-single";
-@import "pages/news";
-@import "pages/management";
-@import "pages/service";
-@import "pages/celevoe";
-@import "pages/abit-future";
+@include meta.load-css("pages/main");
+@include meta.load-css("pages/abit");
+@include meta.load-css("pages/fak");
+@include meta.load-css("pages/news-single");
+@include meta.load-css("pages/news");
+@include meta.load-css("pages/management");
+@include meta.load-css("pages/service");
+@include meta.load-css("pages/celevoe");
+@include meta.load-css("pages/abit-future");
 
 .heading-2 {
   font-size: 24px;
